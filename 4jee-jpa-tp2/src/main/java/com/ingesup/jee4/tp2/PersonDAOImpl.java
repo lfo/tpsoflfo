@@ -10,8 +10,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -22,33 +20,11 @@ public class PersonDAOImpl implements PersonDAO {
     private Connection connection;
 
     public void create(String firstName, String lastName) throws DAOException {
-        try {
-            Statement statement = getConnection().createStatement();
-            statement.execute("INSERT INTO PERSON (firstName, lastName) values ('" + firstName + "','" + lastName + "')");
-            try {
-                statement.close();
-            } catch (SQLException sqlEx) {
-                // je ne fais rien , car j'ai essayé.
-            }
-
-        } catch (SQLException ex) {
-            throw new DAOException(ex);
-        }
+        execute("INSERT INTO PERSON (firstName, lastName) values ('" + firstName + "','" + lastName + "')");
     }
 
-    //DELETE FROM TEST WHERE ID=2;
     public void delete(Person person) throws DAOException {
-        try {
-            Statement statement = getConnection().createStatement();
-            statement.execute("DELETE FROM Person WHERE id = " + person.getId());
-            try {
-                statement.close();
-            } catch (SQLException sqlEx) {
-                // je ne fais rien , car j'ai essayé.
-            }
-        } catch (SQLException ex) {
-            throw new DAOException(ex);
-        }
+        execute("DELETE FROM Person WHERE id = " + person.getId());
     }
 
     public List<Person> getAllPersons() throws DAOException {
@@ -59,14 +35,8 @@ public class PersonDAOImpl implements PersonDAO {
         return find("SELECT * FROM Person WHERE lastname like '" + prefixLastName + "%' ORDER BY id ASC");
     }
 
-    //UPDATE TEST SET NAME='Hi' WHERE ID=1;
     public void updateLastName(Person person) throws DAOException {
-        try {
-            Statement statement = getConnection().createStatement();
-            statement.execute("UPDATE Person set Lastname = '" + person.getLastName() + "' WHERE id = " + person.getId());
-        } catch (SQLException ex) {
-            throw new DAOException(ex);
-        }
+        execute("UPDATE Person set Lastname = '" + person.getLastName() + "' WHERE id = " + person.getId());
     }
 
     public void close() throws DAOException {
@@ -106,11 +76,29 @@ public class PersonDAOImpl implements PersonDAO {
             }
             return connection;
         } catch (SQLException ex) {
-           throw new DAOException();
+            throw new DAOException();
         }
     }
 
-    private List<Person> find(String sqlQuery) throws DAOException {
+    private void execute(String query, Object ... parameters) throws DAOException {
+        Statement statement = null;
+        try {
+            statement = getConnection().createStatement();           
+            statement.execute(query);
+        } catch (SQLException ex) {
+            throw new DAOException(ex);
+        } finally {
+            try {
+                if (statement != null) {
+                    statement.close();
+                }
+            } catch (SQLException sqlEx) {
+                // je ne fais rien , car j'ai essayé.
+            }
+        }
+    }
+
+    private List<Person> find(String sqlQuery, String... parameters) throws DAOException {
         List<Person> persons = new ArrayList<Person>();
         Statement statement = null;
         ResultSet result = null;
