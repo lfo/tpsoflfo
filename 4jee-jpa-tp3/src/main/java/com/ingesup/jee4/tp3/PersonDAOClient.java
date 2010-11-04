@@ -15,7 +15,7 @@ import java.util.List;
 public class PersonDAOClient {
 
     public static PersonDAO getPersonDAO() throws DAOException {
-        return new PersonDAOImpl();
+        return PersonDAOImpl.getInstance();
     }
 
     public static void main(String ... args) throws DAOException {
