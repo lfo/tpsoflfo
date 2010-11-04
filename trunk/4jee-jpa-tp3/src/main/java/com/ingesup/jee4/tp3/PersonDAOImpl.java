@@ -18,6 +18,19 @@ import java.util.Properties;
  */
 public class PersonDAOImpl implements PersonDAO {
 
+    private static  PersonDAOImpl instance ;
+    
+
+    private PersonDAOImpl() {
+    }
+
+    public static PersonDAOImpl getInstance() {
+        if (instance == null) {            
+            instance = new PersonDAOImpl();            
+        }
+        return instance;
+    }
+
     private Connection connection;
 
     public void create(String firstName, String lastName) throws DAOException {
@@ -74,7 +87,7 @@ public class PersonDAOImpl implements PersonDAO {
         }
     }
 
-    private void initConnection() throws DAOException {
+    public void initConnection() throws DAOException {
         try {
             InputStream input = this.getClass().getClassLoader().getResourceAsStream("jdbc.properties");
             Properties properties = new Properties();
