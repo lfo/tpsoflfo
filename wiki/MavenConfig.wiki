@@ -21,4 +21,4 @@ REM : L'adresse IP change à chaque cours.
 
 = En dehors des cours =
 
-Le repository Nexus local n'est plus disponible, il vous faut donc accéder à l'ensemble des repositories nécessaires pour la réalisation des TPs. Pour cela et pour l'instant, il vous faut récupérer []
+Le repository Nexus local n'est plus disponible, il vous faut donc accéder à l'ensemble des repositories nécessaires pour la réalisation des TPs. Pour cela et pour l'instant, il vous faut rempalcer votre ~/.m2/settings.xml par [http://tpsoflfo.googlecode.com/svn/trunk/USER_HOME/.m2/settings.xml].
