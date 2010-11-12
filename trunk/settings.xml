@@ -1,0 +1,25 @@
+
+<settings>
+<!--    <mirrors>
+        <mirror>
+            <id>nexus-lfo-mirror</id>
+            <mirrorOf>*</mirrorOf>
+            <url>http://10.11.244.64:8081/nexus/content/groups/public/</url>
+        </mirror>
+    </mirrors>-->
+
+    <profiles>
+        <profile>
+            <id>external-repositories</id>
+            <repositories>
+                <repository>
+                    <id>EclipseLink Repo</id>
+                    <url>http://mirror.csclub.uwaterloo.ca/eclipse/rt/eclipselink/maven.repo/</url>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>external-repositories</activeProfile>
+    </activeProfiles>
+</settings>
