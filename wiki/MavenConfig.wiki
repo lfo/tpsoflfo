@@ -2,7 +2,7 @@
 
 = Pendant le cours =
 
-Pour ne pas avoir de problèmes de connexion lors des téléchargements des dépendances par Maven, il faut configurer son ~/.m2/settings.xml de telle manière à accéder au nexus configurer localement.
+Pour ne pas avoir de problèmes de connexion lors des téléchargements des dépendances par Maven, il vous faut configurer votre ~/.m2/settings.xml de telle manière à accéder au nexus configurer localement.
 
 Exemple : 
 {{{
