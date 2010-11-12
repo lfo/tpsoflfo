@@ -1,0 +1,24 @@
+#Configuration Maven du projet
+
+= Pendant le cours =
+
+Pour ne pas avoir de problèmes de connexion lors des téléchargements des dépendances par Maven, il faut configurer son ~/.m2/settings.xml de telle manière à accéder au nexus configurer localement.
+
+Exemple : 
+{{{
+<settings>
+   <mirrors>
+        <mirror>
+            <id>nexus-lfo-mirror</id>
+            <mirrorOf>*</mirrorOf>
+            <url>http://10.11.244.64:8081/nexus/content/groups/public/</url>
+        </mirror>
+    </mirrors>
+</settings>
+}}}
+
+REM : L'adresse IP change à chaque cours.
+
+= En dehors des cours =
+
+Le repository Nexus local n'est plus disponible, il vous faut donc accéder à l'ensemble des repositories nécessaires pour la réalisation des TPs. Pour cela et pour l'instant, il vous faut récupérer []
