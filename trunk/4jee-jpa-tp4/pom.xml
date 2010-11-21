@@ -7,10 +7,12 @@
         <artifactId>4jee-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>4jee-jpa-tp1</artifactId>
+    <groupId>com.ingesup.jee4</groupId>
+    <artifactId>4jee-jpa-tp4</artifactId>
     <packaging>jar</packaging>
-    <name>4jee-jpa-tp1</name>
-    <dependencies>
+    <name>4jee-jpa-tp4</name>
+   
+     <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -18,7 +20,15 @@
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
+            <artifactId>h2</artifactId>            
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>javax.persistence</artifactId>
+        </dependency>        
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>eclipselink</artifactId>
         </dependency>
     </dependencies>
 </project>

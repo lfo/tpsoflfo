@@ -40,7 +40,7 @@ public class PersonApp {
         Connection connection = DriverManager.getConnection(jdbcUrl, jdbcUser, jdbcPassword);
         Statement statement = connection.createStatement();
 
-        ResultSet resultSet = statement.executeQuery("select * from person1 order by firstname asc");
+        ResultSet resultSet = statement.executeQuery("select * from person order by firstname asc");
 
         while (resultSet.next()) {
             Integer id = resultSet.getInt("ID");

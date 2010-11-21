@@ -10,5 +10,15 @@
     <artifactId>4jee-jpa-tp3</artifactId>
     <packaging>jar</packaging>
     <name>4jee-jpa-tp3</name>
-    
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+        </dependency>
+    </dependencies>
 </project>
