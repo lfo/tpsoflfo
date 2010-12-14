@@ -30,7 +30,7 @@ public class PersonDAOJPAImpl implements PersonDAO {
     public void delete(Person person) throws DAOException {
         EntityTransaction tx = entityManager.getTransaction();
         tx.begin();
-        Person personToDelete = entityManager.find(Person.class, person.getId());
+        Person personToDelete = entityManager.getReference(Person.class, person.getId());
         entityManager.remove(personToDelete);
         tx.commit();
     }
