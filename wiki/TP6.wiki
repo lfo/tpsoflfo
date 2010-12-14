@@ -1,0 +1,17 @@
+#instruction concernant le TP6
+
+= TP6 =
+
+Dans les entités : 
+  * Créer la classe abstraite Media
+  * Book herite de Media
+  * DVD herite de Media, et a un nouvel attribut duration
+  * Une Person possède des Media plutôt que des Book
+
+Dans le DAO ajouter les méthodes suivantes :
+
+{{{
+DVD createDVD(String title, int duration, Person owner);
+}}}
+
+Valider le DAO par un test créant deux dvds et trois livres.
