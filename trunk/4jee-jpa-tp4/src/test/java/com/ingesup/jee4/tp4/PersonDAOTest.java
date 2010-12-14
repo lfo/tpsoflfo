@@ -24,6 +24,7 @@ public class PersonDAOTest {
     public static void init() throws Exception {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("4jee-tp4-pu");
         entityManager = emf.createEntityManager();
+        personDAO = new PersonDAOJPAImpl(entityManager);
     }
 
     @AfterClass
@@ -66,6 +67,7 @@ public class PersonDAOTest {
         List<Person> smiths = personDAO.findAllWithPrefixLastName(SMITH);
         assertEquals(1, smiths.size());
         Person personToUpdate = smiths.iterator().next();
+        entityManager.detach(personToUpdate);
         personToUpdate.setLastName(DUPONT);
         personDAO.updateLastName(personToUpdate);
         smiths = personDAO.findAllWithPrefixLastName(SMITH);
@@ -81,7 +83,7 @@ public class PersonDAOTest {
         assertEquals(1, durands.size());
         Person personToDelete = durands.iterator().next();
         personDAO.delete(personToDelete);
-        durands = personDAO.findAllWithPrefixLastName(SMITH);
+        durands = personDAO.findAllWithPrefixLastName(DURAND);
         assertTrue(durands.isEmpty());
         assertEquals(2, personDAO.getAllPersons().size());
     }
