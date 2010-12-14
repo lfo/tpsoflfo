@@ -1,6 +1,6 @@
-#instruction concernant le TP6
-
 = TP6 =
+
+Instruction concernant le TP6
 
 Dans les entités : 
   * Créer la classe abstraite Media
