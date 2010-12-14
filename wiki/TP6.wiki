@@ -14,4 +14,9 @@ Dans le DAO ajouter les méthodes suivantes :
 DVD createDVD(String title, int duration, Person owner);
 }}}
 
-Valider le DAO par un test créant deux dvds et trois livres.
+Valider le DAO par : 
+  * Un test créant deux dvds et trois livres.
+  * Validant la liste des médias possédés par chaque personne.
+  * Validant pour chaque 
+     * livre la liste de ses auteurs
+     * DVD sa durée.
