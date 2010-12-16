@@ -10,7 +10,7 @@ Dans les entités,
  * modifier :
    * la classe `Person` qui possède des `Media` plutôt que des `Book`
 
-Le BookDAO devient MediaDAO et ajouter la méthode suivante :
+Le `BookDAO` devient `MediaDAO` et ajouter la méthode suivante :
 
 {{{
 DVD createDVD(String title, int duration, Person owner);
