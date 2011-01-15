@@ -1,14 +1,5 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package com.ingesup.jee4.tp2;
 
-import com.ingesup.jee4.tp2.Person;
-import com.ingesup.jee4.tp2.PersonDAO;
-import java.io.IOException;
-import java.sql.SQLException;
 import java.util.List;
 
 
