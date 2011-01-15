@@ -51,7 +51,7 @@ public class PersonDAOTest extends TestAbs {
         Person personToUpdate = smiths.iterator().next();
         entityManager.detach(personToUpdate);
         personToUpdate.setLastName(DUPONT);
-        personDAO.updateLastName(personToUpdate);
+        personDAO.updatePerson(personToUpdate);
         smiths = personDAO.findAllWithPrefixLastName(SMITH);
         assertTrue(smiths.isEmpty());
         assertEquals(3, personDAO.getAllPersons().size());

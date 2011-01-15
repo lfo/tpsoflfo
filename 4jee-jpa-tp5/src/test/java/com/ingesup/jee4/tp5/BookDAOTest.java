@@ -1,7 +1,11 @@
 package com.ingesup.jee4.tp5;
 
-import com.ingesup.jee4.tp5.impl.BookDAOJPAImpl;
+import org.junit.After;
+import org.junit.Before;
+import java.util.List;
+import javax.persistence.EntityTransaction;
 import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
  *
@@ -14,24 +18,39 @@ public class BookDAOTest extends TestAbs {
     public static final String LE_MONTECHARGE = "Le Monte-charge";
     public static final String LHORRIBLE_MONSIEUR_SMITH = "L'horrible Monsieur Smith";
     public static final String PUISQUE_LES_OISEAUX_MEURENT = "Puisque les oiseaux meurent";
-    private BookDAOJPAImpl bookDAO;
+
+    @Before
+    public void cleanInsert() throws DAOException {
+        cleanData();
+        insertData();        
+    }
 
     @Test
     public void findByPrefix() throws DAOException {
-        insertData();
-        throw new UnsupportedOperationException("TODO");
+        assertNotNull(bookDAO.findBookByTitle(LA_PELOUSE));
     }
 
     @Test
-    public void getOwner() throws DAOException {
-        insertData();
-        throw new UnsupportedOperationException("TODO");
+    public void validScenario1() throws DAOException {
+        Book laFoire = bookDAO.findBookByTitle(LA_FOIRE_AUX_ASTICOTS).iterator().next();
+        List<Person> authors = bookDAO.getAuthors(laFoire);
+        assertEquals(2, authors.size());
+        for (Person author : authors) {
+            assertTrue(author.getFirstName().equals(PersonDAOTest.PAUL) || author.getFirstName().equals(PersonDAOTest.PIERRE));
+        }
     }
 
     @Test
-    public void getAuthors() throws DAOException {
-        insertData();
-        throw new UnsupportedOperationException("TODO");
+    public void validScenario2() throws DAOException {
+        Person person = personDAO.findAllWithPrefixLastName(PersonDAOTest.SMITH).iterator().next();
+        assertEquals(3, bookDAO.getOwned(person).size());
+    }
+
+    @Test
+    public void validScenario3() throws DAOException {
+        Person pierre = personDAO.findAllWithPrefixLastName(PersonDAOTest.DUPONT).iterator().next();
+        List<Book> books = pierre.getWrittenBooks();
+        assertEquals(3, books.size());
     }
 
     private void insertData() throws DAOException {
@@ -44,6 +63,35 @@ public class BookDAOTest extends TestAbs {
         final Book monteCharge = bookDAO.persistBook(new Book(LE_MONTECHARGE));
         final Book horrible = bookDAO.persistBook(new Book(LHORRIBLE_MONSIEUR_SMITH));
 
+        EntityTransaction tx = entityManager.getTransaction();
+        tx.begin();
+        foire.getAuthors().add(pierre);
+        pierre.getWrittenBooks().add(foire);
 
+        foire.getAuthors().add(paul);
+        paul.getWrittenBooks().add(foire);
+
+        foire.setOwner(jacques);
+        pelouse.setOwner(jacques);
+        oiseaux.setOwner(jacques);
+
+        monteCharge.getAuthors().add(pierre);
+        pierre.getWrittenBooks().add(monteCharge);
+        horrible.getAuthors().add(pierre);
+        pierre.getWrittenBooks().add(horrible);
+        tx.commit();
+    }
+
+    private void cleanData() throws DAOException {
+        EntityTransaction tx = entityManager.getTransaction();
+        tx.begin();
+        for (Book book : bookDAO.getAllBooks()) {
+            entityManager.remove(book);
+        }
+
+        for (Person person : personDAO.getAllPersons()) {
+            entityManager.remove(person);
+        }
+        tx.commit();
     }
 }

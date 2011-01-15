@@ -8,6 +8,8 @@ import java.util.List;
  */
 public interface BookDAO {
 
+    public List<Book> getAllBooks() throws DAOException;
+    
     public Book persistBook(Book book);
 
     public Book updateBook(Book book);
@@ -17,4 +19,5 @@ public interface BookDAO {
     public Person getOwner(Book book);
 
     public List<Person> getAuthors(Book book);
+    
 }

@@ -15,7 +15,7 @@ public interface PersonDAO {
 
     public Person create(String firstName, String lastName) throws DAOException;
 
-    public void updateLastName(Person person) throws DAOException;
+    public Person updatePerson(Person person) throws DAOException;
 
     public void delete(Person person) throws DAOException;
 
