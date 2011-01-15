@@ -56,11 +56,12 @@ public class PersonDAOJPAImpl implements PersonDAO {
     }
 
     @Override
-    public void updateLastName(Person person) throws DAOException {
+    public Person updatePerson(Person person) throws DAOException {
         EntityTransaction tx = entityManager.getTransaction();
         tx.begin();
         entityManager.merge(person);
         tx.commit();
+        return person;
         
     }
 }
