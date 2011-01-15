@@ -1,6 +1,5 @@
 package com.ingesup.jee4.tp5;
 
-import org.junit.After;
 import org.junit.Before;
 import java.util.List;
 import javax.persistence.EntityTransaction;
