@@ -43,7 +43,7 @@ public class BookDAOJPAImpl implements BookDAO {
 
     @Override
     public Person getOwner(Book book) {
-        Query query = entityManager.createQuery("select p from Person p INNER JOIN person.owned b");
+        Query query = entityManager.createQuery("select p from Person p INNER JOIN person.owned b where b.id = ");
         query.setParameter("bookId", book);
         List<Person> persons = query.getResultList();
         return persons.iterator().next();
@@ -55,6 +55,7 @@ public class BookDAOJPAImpl implements BookDAO {
         query.setParameter("personId", p.getId());
         List<Book> books = query.getResultList();
         return books;
+//        return p.getOwnedBooks();
     }
 
     @Override
