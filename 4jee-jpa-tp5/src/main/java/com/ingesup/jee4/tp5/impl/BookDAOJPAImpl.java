@@ -38,21 +38,25 @@ public class BookDAOJPAImpl implements BookDAO {
 
     @Override
     public List<Person> getAuthors(Book book) {
-        return book.getAuthors();
+        Query query = entityManager.createQuery("select p from Person p where p.writtenBooks = :book");
+        query.setParameter("book", book);
+        List<Person> persons = query.getResultList();
+        return persons;
+//        return book.getAuthors();
     }
 
     @Override
     public Person getOwner(Book book) {
-        Query query = entityManager.createQuery("select p from Person p INNER JOIN person.owned b where b.id = ");
-        query.setParameter("bookId", book.getId());
+        Query query = entityManager.createQuery("select p from Person p where p.owned = :book");
+        query.setParameter("book", book);
         List<Person> persons = query.getResultList();
         return persons.iterator().next();
 //        return book.getOwner();
     }
 
-    public List<Book> getOwned(Person p) {
-        Query query = entityManager.createQuery("select b from Book b INNER JOIN b.owner p where p.id = :personId");
-        query.setParameter("personId", p.getId());
+    public List<Book> getOwned(Person person) {
+        Query query = entityManager.createQuery("select b from Book b where b.owner = :person");
+        query.setParameter("person", person);
         List<Book> books = query.getResultList();
         return books;
 //        return p.getOwnedBooks();
