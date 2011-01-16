@@ -44,7 +44,7 @@ public class BookDAOJPAImpl implements BookDAO {
     @Override
     public Person getOwner(Book book) {
         Query query = entityManager.createQuery("select p from Person p INNER JOIN person.owned b where b.id = ");
-        query.setParameter("bookId", book);
+        query.setParameter("bookId", book.getId());
         List<Person> persons = query.getResultList();
         return persons.iterator().next();
 //        return book.getOwner();
