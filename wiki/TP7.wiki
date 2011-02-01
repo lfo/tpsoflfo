@@ -1,5 +1,7 @@
 = TP7 : Instruction =
 
+ * Affecter des opérations (méthodes de l'{{{EntityManager}}}) à chacune des flèches de [http://code.google.com/p/tpsoflfo/downloads/detail?name=entitylifecycle.png entitylifecycle.png ]
+
  * Améliorer la gestion des entités du TP précédent
 
  * Introduire une gestion de cache et la valider par un test unitaire. 
