@@ -1,0 +1,51 @@
+= JPQL =
+
+ Modifier DAO :
+
+  * ajouter une recherche de DVD par durée entre deux bornes
+  * ...
+
+= API Criteria =
+
+ Utiliser l'api Criteria pour le BookDAO et PersonDAO
+
+  
+= Configuration Maven =
+
+  Pour qu'eclipselink puisse générer le métamodèle, il faut utiliser l'annotation processor du jdk. Afin de lancer cet annotation processor dans maven il faut utiliser un plugin maven et le configurer :  
+
+{{{
+    <pluginRepositories>
+        <pluginRepository>
+            <id>maven-annotation-plugin</id>
+            <url>http://maven-annotation-plugin.googlecode.com/svn/trunk/mavenrepo</url>
+        </pluginRepository>
+    </pluginRepositories>
+    <build>
+        <plugins>       
+            <plugin>
+                <groupId>org.bsc.maven</groupId>
+                <artifactId>maven-processor-plugin</artifactId>
+                <version>1.3.5</version>
+                <executions>
+                    <execution>
+                        <id>process</id>
+                        <goals>
+                            <goal>process</goal>
+                        </goals>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <compilerArguments>-Aeclipselink.persistencexml=src/main/resources/META-INF/persistence.xml</compilerArguments>
+                            <processors>
+                                <processor>org.eclipse.persistence.internal.jpa.modelgen.CanonicalModelProcessor</processor>
+                            </processors>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>    
+    </build>
+
+
+
+}}}
