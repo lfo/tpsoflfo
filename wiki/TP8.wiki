@@ -1,13 +1,15 @@
 = JPQL =
 
- Modifier DAO :
+ Modifier les DAO du TP6 :
 
-  * ajouter une recherche de DVD par durée entre deux bornes
-  * ...
+  * Ajouter une recherche de DVD par durée entre deux bornes :
+
+ 
+  * Créer une requête dynamique 
 
 = API Criteria =
 
- Utiliser l'api Criteria pour le BookDAO et PersonDAO
+ Remplacer le code JPQL l'api Criteria pour le BookDAO et PersonDAO et utiliser le méta-modèle afin de bénéficier d'un langage de requête complètement "Type safe". 
 
   
 = Configuration Maven =
