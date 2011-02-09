@@ -16,7 +16,7 @@
     /**
      * Recherche selon deux paramètres.
      * @param titlePrefix peut être nul, dans ce cas le filtre se fait sur les auteurs 
-     * @param authors peut être nul ou vide, dans ce cas le filtre 
+     * @param authors peut être nul ou vide, dans ce cas le filtre se fait sur le titre
      * @return liste de Média si les deux paramètre sont vides retournent tous les médias.
      */
     public List<M> findBy(String titlePrefix, List<Person> authors);
