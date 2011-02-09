@@ -32,7 +32,7 @@
 
 = API Criteria =
 
- Remplacer le code JPQL l'api Criteria pour le BookDAO et PersonDAO et utiliser le méta-modèle afin de bénéficier d'un langage de requête complètement "Type safe". 
+ Remplacer le code JPQL par l'api Criteria pour le BookDAO et PersonDAO et utiliser le méta-modèle afin de bénéficier d'un langage de requête complètement "Type safe". 
 
   
 = Configuration Maven =
