@@ -9,7 +9,7 @@
  * Améliorer la gestion des entités du TP précédent. En effet, notre nouvelle maîtrise de l'{{{EntityManager}}} nous permet d'améliorer le code de nos DAOs. Par exemple : 
 
 {{{
-@Override
+    @Override
     public List<Person> getAuthors(Book book) {
         Query query = entityManager.createQuery("select p from Person p where p.writtenBooks = :book");
         query.setParameter("book", book);
@@ -21,7 +21,8 @@
     Peut être remplacé par : 
 
 {{{
-   public List<Person> getAuthors2(Book book) {
+    @Override
+    public List<Person> getAuthors(Book book) {
         Book managedBook = entityManager.find(Book.class , book.getId());        
         return managedBook.getAuthors();
     }
