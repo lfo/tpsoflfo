@@ -3,9 +3,26 @@
  Modifier les DAO du TP6 :
 
   * Ajouter une recherche de DVD par durée entre deux bornes :
+{{{
+    public interface OpticalDiscDAO extends MediaDAO<DVD> {
 
+        public List<DVD> findAllBetween(Long lowDuration, Long highDuration);
+    
+    }
+}}}
  
-  * Créer une requête dynamique 
+  * Dans media DAO ajouter la méthode suivante :
+
+{{{
+    /**
+     * Recherche selon deux paramètres.
+     * @param titlePrefix peut être nul, dans ce cas le filtre se fait sur les auteurs 
+     * @param authors peut être nul ou vide, dans ce cas le filtre 
+     * @return liste de Média si les deux paramètre sont vides retournent tous les médias.
+     */
+    public List<M> findBy(String titlePrefix, List<Person> authors);
+  
+}}}
 
 = API Criteria =
 
