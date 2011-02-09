@@ -2,7 +2,7 @@
 
  * Affecter des opérations (méthodes de l'{{{EntityManager}}}) à chacune des flèches du pseudo diagramme d'état :
 
-[http://tpsoflfo.googlecode.com/files/entitylifecycle.png http://tpsoflfo.googlecode.com/files/entitylifecycle.png]
+    [http://tpsoflfo.googlecode.com/files/entitylifecycle.png http://tpsoflfo.googlecode.com/files/entitylifecycle.png]
     
     Il s'agit ici de faire correspondre un changement d'état (ex : managed --> detached) à une méthode de l'{{{EntityManager}}} (ex em.detach())
 
