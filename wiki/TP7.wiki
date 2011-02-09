@@ -29,7 +29,10 @@
   
   En quoi, est-ce que cela peut être une meilleure solution ?
 
-  Finalement, 
+  Finalement, où pouvons nous encore apporter des modifications ?
 
 
- * Introduire une gestion de cache et la valider par un test unitaire. 
+ * Introduire une gestion de cache et la valider par un test unitaire. C'est à dire, faire en sorte que les entités soient gérés dans un cache, puis écrire un test permettant de validé qu'une instance d'une entité est dans ce cache. 
+
+  
+ 
