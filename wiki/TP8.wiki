@@ -4,15 +4,14 @@
 
   * Ajouter une recherche de DVD par durée entre deux bornes :
 {{{
-    public interface OpticalDiscDAO extends MediaDAO<DVD> {
+  public interface OpticalDiscDAO extends MediaDAO<DVD> {
 
-        public List<DVD> findAllBetween(Long lowDuration, Long highDuration);
+      public List<DVD> findAllBetween(Long lowDuration, Long highDuration);
     
-    }
+  }
 }}}
  
   * Dans media DAO ajouter la méthode suivante :
-
 {{{
     /**
      * Recherche selon deux paramètres.
