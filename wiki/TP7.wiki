@@ -6,7 +6,7 @@
     
     Il s'agit ici de faire correspondre un changement d'état (ex : managed --> detached) à une méthode de l'{{{EntityManager}}} (ex em.detach())
 
- * Améliorer la gestion des entités du TP précédent. En effet, notre nouvelle maîtrise de l'{{{EntityManager}}} nous permet d'améliorer le code de nos DAOs. Par exemple : 
+ * Améliorer la gestion des entités du TP 5 précédent. En effet, notre nouvelle maîtrise de l'{{{EntityManager}}} nous permet d'améliorer le code de nos DAOs. Par exemple : 
 
 {{{
     @Override
