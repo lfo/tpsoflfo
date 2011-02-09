@@ -10,9 +10,16 @@
     
   }
 }}}
- 
-  * Dans media DAO ajouter la méthode suivante :
+
+  * Dans MediaDAO ajouter les méthodes suivantes :
 {{{
+
+    /**
+     * Recherche des médias ayant au moins deux auteurs. 
+     * @return 
+     */
+    public List<M> findMediaWithAtLeast2Authors();
+
     /**
      * Recherche selon deux paramètres.
      * @param titlePrefix peut être nul, dans ce cas le filtre se fait sur les auteurs 
