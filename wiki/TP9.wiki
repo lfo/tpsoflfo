@@ -8,18 +8,35 @@
 
 == Maven ==
 
+  Ajout de la dépendance glassfish :
 
  {{{
+ <repositories>
+         ...
+        <repository>
+		<id>glassfish-maven-repository.dev.java.net</id>
+		<name>GlassFish Maven Repository</name>
+		<url>http://download.java.net/maven/glassfish</url>
+	</repository>       
+</repositories>
+<dependencies>
+	...
+	<dependency>
+		<groupId>org.glassfish.extras</groupId>
+		<artifactId>glassfish-embedded-all</artifactId>
+		<version>3.0.1-b20</version>
+	</dependency>
+</dependencies>
 
 }}} 
 
 == Un conteneur pour les tests ==
 
-== Un conteneur de déploiement 
+== Un conteneur de déploiement ==
 
- Installation de glassfish 
+ * Installation de glassfish 
 
- Déploiement de l'application 
+ * Déploiement de l'application 
 
 {{{
 TODO
