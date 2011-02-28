@@ -1,0 +1,26 @@
+# instruction du TP9 
+
+= TP9 =
+
+  Créer une couche métier utilisant des EJB stateless gérant les entités des TPs précédents. 
+
+= Environnement = 
+
+== Maven ==
+
+
+ {{{
+
+}}} 
+
+== Un conteneur pour les tests ==
+
+== Un conteneur de déploiement 
+
+ Installation de glassfish 
+
+ Déploiement de l'application 
+
+{{{
+TODO
+}}}
