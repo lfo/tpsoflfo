@@ -6,9 +6,9 @@
 
 = Environnement = 
 
-== Maven ==
+== Compilation ==
 
-  Ajout de la dépendance glassfish :
+  Ajout de la dépendance glassfish et de son repository dans Maven :
 
  {{{
  <repositories>
@@ -30,18 +30,22 @@
 
 }}} 
 
+== packaging ==
+
+ TODO
+
 == Un conteneur pour les tests ==
 
 == Un conteneur de déploiement ==
 
- * Installation et exécution de Glassfish
+Installation et exécution de Glassfish
 
   * Téléchargement [http://glassfish.java.net/downloads/3.1-final.html]
 
   * Instruction : [http://glassfish.java.net/docs/3.1/quick-start-guide.pdf]
  
 
- * Déploiement de l'application 
+  * Déploiement de l'application packagée
 
 {{{
 TODO
