@@ -34,7 +34,9 @@
 
 == Un conteneur de déploiement ==
 
- * Installation de glassfish 
+ * Installation de glassfish
+  * [http://glassfish.java.net/downloads/3.1-final.html]
+ 
 
  * Déploiement de l'application 
 
