@@ -4,6 +4,14 @@
 
   Créer une couche métier utilisant des EJB stateless gérant les entités des TPs précédents. 
 
+== Solution 1 ==
+
+  Au vu de la simplification apportée à nos DAOs par JPA, vous jugez que leur code est trop simpliste et revient à la responsabilité des EJBs à créer dans un nouveau module.
+
+== Solution 2 == 
+
+  Vous déléguez la responsabilité de la gestion de la persistance à vos DAO, et récupérer la gestion des transactions au niveau des EJBs à créer dans un nouveau module. 
+
 = Environnement = 
 
 Configuration des différents environnements. En effet, il est nécessaire de gérer les librairies contenant les APIs EJB pour compiler. Il faut aussi un environnement d'exécution des tests. Finalement, il faut packager l'application afin de la déployer dans un serveur d'application.
@@ -34,7 +42,7 @@ Configuration des différents environnements. En effet, il est nécessaire de g�
 
 == packaging ==
 
-{{http://docs.codehaus.org/display/MAVENUSER/Multi-modules+projects}}
+[http://docs.codehaus.org/display/MAVENUSER/Multi-modules+projects]
 
 == Un conteneur pour les tests ==
 
