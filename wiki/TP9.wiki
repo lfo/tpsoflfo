@@ -34,7 +34,7 @@ Configuration des différents environnements. En effet, il est nécessaire de g�
 
 == packaging ==
 
- TODO
+{{http://docs.codehaus.org/display/MAVENUSER/Multi-modules+projects}}
 
 == Un conteneur pour les tests ==
 
