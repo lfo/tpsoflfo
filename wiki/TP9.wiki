@@ -34,8 +34,11 @@
 
 == Un conteneur de déploiement ==
 
- * Installation de glassfish
-  * [http://glassfish.java.net/downloads/3.1-final.html]
+ * Installation et exécution de Glassfish
+
+  * Téléchargement [http://glassfish.java.net/downloads/3.1-final.html]
+
+  * Instruction : [http://glassfish.java.net/docs/3.1/quick-start-guide.pdf]
  
 
  * Déploiement de l'application 
