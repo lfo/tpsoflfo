@@ -6,6 +6,8 @@
 
 = Environnement = 
 
+Configuration des différents environnements. En effet, il est nécessaire de gérer les librairies contenant les APIs EJB pour compiler. Il faut aussi un environnement d'exécution des tests. Finalement, il faut packager l'application afin de la déployer dans un serveur d'application.
+
 == Compilation ==
 
   Ajout de la dépendance glassfish et de son repository dans Maven :
