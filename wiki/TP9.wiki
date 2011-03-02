@@ -12,6 +12,8 @@
 
   Vous déléguez la responsabilité de la gestion de la persistance à vos DAO, et récupérer la gestion des transactions au niveau des EJBs à créer dans un nouveau module. 
 
+REM : préférez la solution 2!
+
 = Environnement = 
 
 Configuration des différents environnements. En effet, il est nécessaire de gérer les librairies contenant les APIs EJB pour compiler. Il faut aussi un environnement d'exécution des tests. Finalement, il faut packager l'application afin de la déployer dans un serveur d'application.
