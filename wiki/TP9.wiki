@@ -47,6 +47,9 @@ Configuration des différents environnements. En effet, il est nécessaire de g�
 [http://docs.codehaus.org/display/MAVENUSER/Multi-modules+projects]
 
 == Un conteneur pour les tests ==
+
+ Glassfish nous offre une API nous permettant de créer un container, il suffit de s'en servir dans nos tests.
+
 {{{
 
     private static EJBContainer ec;
