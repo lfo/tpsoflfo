@@ -3,6 +3,7 @@ package com.ingesup.jee4.tp7;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Cacheable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,6 +18,7 @@ import javax.persistence.NamedQuery;
  */
 @Entity
 @NamedQuery(name="allBooks", query="select b from Book b")
+@Cacheable(true)
 public class Book implements Serializable {
 
     @Id
@@ -24,7 +26,8 @@ public class Book implements Serializable {
     private int id;
     private String title;
     
-    @ManyToOne 
+    @ManyToOne
+//    @JoinColumn(name="OWNER_ID")
     private Person owner;    
     @ManyToMany
     private List<Person> authors = new ArrayList<Person>();;
