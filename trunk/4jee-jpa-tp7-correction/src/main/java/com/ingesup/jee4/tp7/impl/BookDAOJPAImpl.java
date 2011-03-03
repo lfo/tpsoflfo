@@ -38,29 +38,20 @@ public class BookDAOJPAImpl implements BookDAO {
 
     @Override
     public List<Person> getAuthors(Book book) {
-        
-        Query query = entityManager.createQuery("select p from Person p where p.writtenBooks = :book");
-        query.setParameter("book", book);
-        List<Person> persons = query.getResultList();
-        return persons;
-//        return book.getAuthors();
+        Book managedBook = entityManager.find(Book.class , book.getId());   
+        return managedBook.getAuthors();
     }
 
     @Override
     public Person getOwner(Book book) {
-        Query query = entityManager.createQuery("select p from Person p where p.owned = :book");
-        query.setParameter("book", book);
-        List<Person> persons = query.getResultList();
-        return persons.iterator().next();
-//        return book.getOwner();
+        Book managedBook = entityManager.find(Book.class , book.getId());        
+        return managedBook.getOwner();
     }
 
     public List<Book> getOwned(Person person) {
-        Query query = entityManager.createQuery("select b from Book b where b.owner = :person");
-        query.setParameter("person", person);
-        List<Book> books = query.getResultList();
-        return books;
-//        return p.getOwnedBooks();
+        Person managedPerson = entityManager.find(Person.class , person.getId());  
+//        entityManager.refresh(managedPerson);
+        return managedPerson.getOwnedBooks();
     }
 
     @Override
@@ -76,8 +67,8 @@ public class BookDAOJPAImpl implements BookDAO {
     public Book updateBook(Book book) {
         EntityTransaction tx = entityManager.getTransaction();
         tx.begin();
-        entityManager.persist(book);
+        Book mergedBook = entityManager.merge(book);
         tx.commit();
-        return book;
+        return mergedBook;
     }
 }

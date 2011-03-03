@@ -17,10 +17,11 @@ public abstract class TestAbs {
     protected static EntityManager em;
     protected static PersonDAOJPAImpl personDAO;
     protected static BookDAOJPAImpl bookDAO;
-
+    protected static EntityManagerFactory emf;
+    
     @BeforeClass
     public static void init() throws Exception {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("4jee-tp7-pu");
+        emf = Persistence.createEntityManagerFactory("4jee-tp7-pu");
         em = emf.createEntityManager();
         personDAO = new PersonDAOJPAImpl(em);
         bookDAO = new BookDAOJPAImpl(em);

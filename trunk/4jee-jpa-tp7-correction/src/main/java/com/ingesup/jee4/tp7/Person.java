@@ -3,6 +3,7 @@ package com.ingesup.jee4.tp7;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Cacheable;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -18,13 +19,14 @@ import javax.persistence.OneToMany;
  */
 @Entity
 @NamedQuery(name="AllPersons", query="SELECT p FROM Person p")
+@Cacheable(true)
 public class Person implements Serializable {
 
     @Id @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id;
     private String firstName;
     private String lastName;
-    @OneToMany(mappedBy = "owner")
+    @OneToMany(mappedBy="owner")
     private List<Book> ownedBooks = new ArrayList<Book>();
     @ManyToMany(mappedBy = "authors", fetch=FetchType.EAGER)
     private List<Book> writtenBooks = new ArrayList<Book>();
