@@ -13,6 +13,11 @@
         <module>4jee-jpa-tp4</module>
         <module>4jee-jpa-tp5</module>
         <module>4jee-jpa-tp6</module>
+        <module>4jee-jpa-tp7</module>        
+        <module>4jee-jpa-tp7-correction</module>
+        <module>4jee-jpa-tp8</module>
+        <module>4jee-jpa-tp8-correction</module>
+        <module>4jee-jpa-tp9</module>
     </modules>
     <repositories>
         <repository>
