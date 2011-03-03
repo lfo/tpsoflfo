@@ -4,6 +4,7 @@ package com.ingesup.jee4.tp8.impl;
 import com.ingesup.jee4.tp8.Book;
 import com.ingesup.jee4.tp8.MediaDAO;
 import com.ingesup.jee4.tp8.DAOException;
+import com.ingesup.jee4.tp8.Person;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -32,6 +33,8 @@ public class BookDAOJPAImpl extends MediaDAOJPAAbstract<Book> implements MediaDA
         List<Book> books = query.getResultList();
         return books;
     }
+
+   
 
   
 }

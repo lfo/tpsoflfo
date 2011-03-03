@@ -1,7 +1,7 @@
 package com.ingesup.jee4.tp8;
 
+import java.util.List;
 import javax.persistence.EntityTransaction;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -29,6 +29,42 @@ public class MediaDAOTest extends TestAbs {
     }
 
     @Test
+    public void betweenDuration() {
+        List<DVD> dvds = dvdDAO.findAllBetween(0L, Long.MAX_VALUE);
+        assertEquals(2, dvds.size());
+
+        dvds = dvdDAO.findAllBetween(MEGAMIND_DURATION - 1L, MEGAMIND_DURATION + 1L);
+        assertEquals(1, dvds.size());
+    }
+
+    @Test
+    public void atLeast2Authors() {
+        List<DVD> dvd = dvdDAO.findMediaWithAtLeast2Authors();
+        assertEquals(1, dvd.size());
+
+        List<Book> books = bookDAO.findMediaWithAtLeast2Authors();
+        assertEquals(1, books.size());
+    }
+
+    @Test
+    public void findBy() throws Exception {
+
+        List<Media> medias = dvdDAO.findBy(null, null);
+        assertEquals(7, medias.size());
+
+        medias = dvdDAO.findBy(MEGAMIND, null);
+        assertEquals(1, medias.size());
+
+        List<Person> authors = personDAO.findAllWithPrefixLastName(PersonDAOTest.DUPONT);
+        List<Media> books = bookDAO.findBy(null, authors);
+        assertEquals(4, books.size());
+
+        
+//        List<Media> books = bookDAO.findBy(LA_FOIRE_AUX_ASTICOTS, authors);
+//        assertEquals(1, books.size());
+    }
+
+    @Test
     public void checkDuration() {
         DVD dvd = dvdDAO.findByTitle(MEGAMIND).iterator().next();
         assertEquals(MEGAMIND_DURATION, dvd.getDuration());
@@ -41,7 +77,7 @@ public class MediaDAOTest extends TestAbs {
     }
 
     @Test
-    public void checkOwned() throws DAOException{
+    public void checkOwned() throws DAOException {
         Person jacques = personDAO.findAllWithPrefixLastName(PersonDAOTest.SMITH).iterator().next();
         assertEquals(4, jacques.getOwnedMedia().size());
     }
