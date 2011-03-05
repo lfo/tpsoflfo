@@ -59,6 +59,8 @@ Configuration des différents environnements. En effet, il est nécessaire de g�
     public static void initContainer() throws Exception {
         Map<String, Object> properties = new HashMap<String, Object>();
         properties.put(EJBContainer.MODULES, new File("target/classes"));
+         properties.put("org.glassfish.ejb.embedded.glassfish.installation.root",
+                "./target/test-classes/glassfish");
         ec = EJBContainer.createEJBContainer(properties);
         ctx = ec.getContext();
     }
