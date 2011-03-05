@@ -42,10 +42,6 @@ Configuration des différents environnements. En effet, il est nécessaire de g�
 
 }}} 
 
-== packaging ==
-
-[http://docs.codehaus.org/display/MAVENUSER/Multi-modules+projects]
-
 == Un conteneur pour les tests ==
 
  Glassfish nous offre une API nous permettant de créer un container, il suffit de s'en servir dans nos tests.
@@ -72,6 +68,13 @@ Configuration des différents environnements. En effet, il est nécessaire de g�
     }
 
 }}}
+
+== Packaging ==
+
+[http://docs.codehaus.org/display/MAVENUSER/Multi-modules+projects]
+
+Il  s'agit ici d'un EJB simplement, le packaging jar est suffisant.
+
 == Un conteneur de déploiement ==
 
 Installation et exécution de Glassfish
@@ -85,12 +88,11 @@ Installation et exécution de Glassfish
 {{{
     <jdbc-resource pool-name="H2Pool" jndi-name="jdbc/__default" />
 
-    <jdbc-connection-pool is-isolation-level-guaranteed="false" name="HsqldbPool" driver-classname="org.hsqldb.jdbcDriver" res-type="java.sql.Driver">
-      <property value="9001" name="PortNumber" />
+    <jdbc-connection-pool is-isolation-level-guaranteed="false" name="H2Pool" 
+    driver-classname="org.h2.jdbcx.JdbcDataSource" res-type="java.sql.Driver">
       <property value="" name="Password" />
       <property value="sa" name="User" />
-      <property value="localhost" name="serverName" />
-      <property value="jdbc:hsqldb:mem:foobar" name="URL" />
+      <property value="jdbc:h2:tcp://localhost/~/test" name="URL" />
     </jdbc-connection-pool>
 
 }}}
