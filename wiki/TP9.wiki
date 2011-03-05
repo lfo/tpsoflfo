@@ -79,11 +79,11 @@ Il  s'agit ici d'un EJB simplement, le packaging jar est suffisant.
 
 Installation et exécution de Glassfish
 
-  * Téléchargement [http://glassfish.java.net/downloads/3.1-final.html]
+  * Télécharger [http://glassfish.java.net/downloads/3.1-final.html]  
 
-  * Instruction : [http://glassfish.java.net/docs/3.1/quick-start-guide.pdf]
+  * Installer la configuration standard
  
-  * ajouter la datasource dans le {{{path_to_glassfish3\glassfish\domains\domain1\config\domain.xml }}}
+  * Ajouter la datasource dans le {{{path_to_glassfish3\glassfish\domains\domain1\config\domain.xml }}}
 
 {{{
     <jdbc-resource pool-name="H2Pool" jndi-name="jdbc/__default" />
@@ -97,9 +97,16 @@ Installation et exécution de Glassfish
 
 }}}
 
+  * Ajouter la librairie 
+
+C:\Users\lfo\.m2\repository\com\h2database\h2\1.2.143\h2-1.2.143.jar
+dans 
+C:\softwares\glassfish3\glassfish\domains\domain1\lib\ext
 
   * Déploiement de l'application packagée
 
 {{{
 
 }}}
+
+  * Plus d'information : [http://glassfish.java.net/docs/3.1/quick-start-guide.pdf]
