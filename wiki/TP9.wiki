@@ -100,11 +100,8 @@ Installation et exécution de Glassfish
 
 }}}
 
-  * Ajouter la librairie 
-
-{{{$Home\.m2\repository\com\h2database\h2\1.2.143\h2-1.2.143.jar}}}
-dans 
-{{{path_to_glassfish3\glassfish\domains\domain1\lib\ext}}}
+  * Ajouter la librairie {{{$Home\.m2\repository\com\h2database\h2\1.2.143\h2-1.2.143.jar}}}
+dans {{{path_to_glassfish3\glassfish\domains\domain1\lib\ext}}}
 
   * Déploiement de l'application packagée
 
