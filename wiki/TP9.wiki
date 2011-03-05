@@ -83,11 +83,14 @@ Installation et exécution de Glassfish
 
   * Installer la configuration standard
  
-  * Ajouter la datasource dans le {{{path_to_glassfish3\glassfish\domains\domain1\config\domain.xml }}}
+  * Modifier la configuration des datasources dans le {{{path_to_glassfish3\glassfish\domains\domain1\config\domain.xml }}}
 
+     * A modifier
 {{{
     <jdbc-resource pool-name="H2Pool" jndi-name="jdbc/__default" />
-
+}}}
+     * A ajouter
+{{{
     <jdbc-connection-pool is-isolation-level-guaranteed="false" name="H2Pool" 
     driver-classname="org.h2.jdbcx.JdbcDataSource" res-type="java.sql.Driver">
       <property value="" name="Password" />
@@ -99,9 +102,9 @@ Installation et exécution de Glassfish
 
   * Ajouter la librairie 
 
-C:\Users\lfo\.m2\repository\com\h2database\h2\1.2.143\h2-1.2.143.jar
+{{{$Home\.m2\repository\com\h2database\h2\1.2.143\h2-1.2.143.jar}}}
 dans 
-C:\softwares\glassfish3\glassfish\domains\domain1\lib\ext
+{{{path_to_glassfish3\glassfish\domains\domain1\lib\ext}}}
 
   * Déploiement de l'application packagée
 
@@ -119,6 +122,6 @@ Application deployed with name 4jee-jpa-tp9-1.0-SNAPSHOT.
 Command deploy executed successfully.
 }}}
 
-  * Accéder à la console d'administration.
+  * Accéder à la console d'administration :[http://localhost:4848]]
 
   * Plus d'information : [http://glassfish.java.net/docs/3.1/quick-start-guide.pdf]
