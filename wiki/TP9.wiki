@@ -6,11 +6,11 @@
 
 == Solution 1 ==
 
-  Au vu de la simplification apportée à nos DAOs par JPA, vous jugez que leur code est trop simpliste et revient à la responsabilité des EJBs à créer dans un nouveau module.
+  Au vu de la simplification apportée à nos DAOs par JPA, vous jugez que leur code est trop simpliste et revient à la responsabilité des EJBs à créer.
 
 == Solution 2 == 
 
-  Vous déléguez la responsabilité de la gestion de la persistance à vos DAO, et récupérer la gestion des transactions au niveau des EJBs à créer dans un nouveau module. 
+  Vous déléguez la responsabilité de la gestion de la persistance à vos DAO, et récupérer la gestion des transactions au niveau des EJBs à créer. 
 
 REM : préférez la solution 2!
 
@@ -78,9 +78,24 @@ Installation et exécution de Glassfish
 
   * Instruction : [http://glassfish.java.net/docs/3.1/quick-start-guide.pdf]
  
+  * ajouter la datasource dans le {{{path_to_glassfish3\glassfish\domains\domain1\config\domain.xml }}}
+
+{{{
+    <jdbc-resource pool-name="H2Pool" jndi-name="jdbc/__default" />
+
+    <jdbc-connection-pool is-isolation-level-guaranteed="false" name="HsqldbPool" driver-classname="org.hsqldb.jdbcDriver" res-type="java.sql.Driver">
+      <property value="9001" name="PortNumber" />
+      <property value="" name="Password" />
+      <property value="sa" name="User" />
+      <property value="localhost" name="serverName" />
+      <property value="jdbc:hsqldb:mem:foobar" name="URL" />
+    </jdbc-connection-pool>
+
+}}}
+
 
   * Déploiement de l'application packagée
 
 {{{
-TODO
+
 }}}
