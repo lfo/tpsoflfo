@@ -107,6 +107,18 @@ C:\softwares\glassfish3\glassfish\domains\domain1\lib\ext
 
 {{{
 
+C:\softwares\glassfish3\bin>asadmin restart-domain
+Successfully restarted the domain
+Command restart-domain executed successfully.
+
+C:\softwares\glassfish3\bin>asadmin ping-connection-pool H2Pool
+Command ping-connection-pool executed successfully.
+
+C:\softwares\glassfish3\bin>asadmin deploy C:\Users\lfo\scm\googlecode\tpsoflfo\trunk\4jee-jpa-tp9\target\4jee-jpa-tp9-1.0-SNAPSHOT.jar
+Application deployed with name 4jee-jpa-tp9-1.0-SNAPSHOT.
+Command deploy executed successfully.
 }}}
+
+  * Accéder à la console d'administration.
 
   * Plus d'information : [http://glassfish.java.net/docs/3.1/quick-start-guide.pdf]
