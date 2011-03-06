@@ -22,11 +22,8 @@ public class PersonDAOJPAImpl implements PersonDAO {
 
     @Override
     public Person create(String firstName, String lastName) throws DAOException {
-        EntityTransaction tx = entityManager.getTransaction();
-        tx.begin();
         Person person = new Person(firstName, lastName);
         entityManager.persist(person);
-        tx.commit();
         return person;
     }
 

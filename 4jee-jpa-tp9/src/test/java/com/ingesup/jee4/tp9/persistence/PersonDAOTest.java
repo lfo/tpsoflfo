@@ -1,7 +1,5 @@
 package com.ingesup.jee4.tp9.persistence;
 
-import com.ingesup.jee4.tp9.persistence.Person;
-import com.ingesup.jee4.tp9.persistence.DAOException;
 import java.util.List;
 import org.junit.Test;
 import static org.junit.Assert.*;
