@@ -6,21 +6,21 @@
 
   Créer une couche métier utilisant des EJB stateless gérant les entités des TPs précédents. 
 
-== Solution 1 ==
+=== Solution 1 ===
 
   Au vu de la simplification apportée à nos DAOs par JPA, vous jugez que leur code est trop simpliste et revient à la responsabilité des EJBs à créer.
 
-== Solution 2 == 
+=== Solution 2 === 
 
   Vous déléguez la responsabilité de la gestion de la persistance à vos DAO, et récupérer la gestion des transactions au niveau des EJBs à créer. 
 
 REM : préférez la solution 2!
 
-= Environnement = 
+== Environnement == 
 
 Configuration des différents environnements. En effet, il est nécessaire de gérer les librairies contenant les APIs EJB pour compiler. Il faut aussi un environnement d'exécution des tests. Finalement, il faut packager l'application afin de la déployer dans un serveur d'application.
 
-== Compilation ==
+=== Compilation ===
 
   Ajout de la dépendance glassfish et de son repository dans Maven :
 
@@ -44,7 +44,7 @@ Configuration des différents environnements. En effet, il est nécessaire de g�
 
 }}} 
 
-== Un conteneur pour les tests ==
+=== Un conteneur pour les tests ===
 
  Glassfish nous offre une API nous permettant de créer un container, il suffit de s'en servir dans nos tests.
 
@@ -71,7 +71,7 @@ Configuration des différents environnements. En effet, il est nécessaire de g�
 
 }}}
 
-== Packaging ==
+=== Packaging ===
 
 [http://docs.codehaus.org/display/MAVENUSER/Multi-modules+projects]
 
@@ -92,8 +92,7 @@ Néanmoins, la classe Main doit être connue, pour cela il faut configurer le pl
 </plugin>
 }}}
 
-
-== Un conteneur de déploiement ==
+=== Un conteneur de déploiement ===
 
 Installation et exécution de Glassfish
 
@@ -124,24 +123,19 @@ dans {{{path_to_glassfish3\glassfish\domains\domain1\lib\ext}}}
   * Déployer l'application packagée
 
 {{{
+$Glassfish_home\bin\asadmin start-domain
 
-C:\softwares\glassfish3\bin>asadmin start-domain
-Successfully restarted the domain
-Command restart-domain executed successfully.
+$Glassfish_home\bin\asadmin ping-connection-pool H2Pool
 
-C:\softwares\glassfish3\bin>asadmin ping-connection-pool H2Pool
-Command ping-connection-pool executed successfully.
+$Glassfish_home\bin\asadmin deploy --force=true  \4jee-jpa-tp9\target\4jee-jpa-tp9-1.0-SNAPSHOT.jar
 
-C:\softwares\glassfish3\bin>asadmin deploy --force=true  C:\Users\lfo\scm\googlecode\tpsoflfo\trunk\4jee-jpa-tp9\target\4jee-jpa-tp9-1.0-SNAPSHOT.jar
-Application deployed with name 4jee-jpa-tp9-1.0-SNAPSHOT.
-Command deploy executed successfully.
 }}}
 
   * Tester avec le client à l'aide de l'Application Client Container   
      
   En effet le client doit tourner dans un container afin que les EJB puissent y être injectés
 {{{
-C:\softwares\glassfish3\glassfish\bin>appclient -client  C:\Users\lfo\scm\googlecode\tpsoflfo\trunk\4jee-jpa-tp9\target\4jee-jpa-tp9-1.0-SNAPSHOT.jar
+$Glassfish_home\glassfish\bin\appclient -client  \4jee-jpa-tp9\target\4jee-jpa-tp9-1.0-SNAPSHOT.jar
 }}}
 
   * Accéder à la console d'administration :[http://localhost:4848]. Naviguez et retrouvez l'EJB déployé faites une impression écran à rendre.
