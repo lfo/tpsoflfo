@@ -142,6 +142,7 @@ Command deploy executed successfully.
 C:\softwares\glassfish3\glassfish\bin>appclient -client  C:\Users\lfo\scm\googlecode\tpsoflfo\trunk\4jee-jpa-tp9\target\4jee-jpa-tp9-1.0-SNAPSHOT.jar
 }}}
 
-  * Accéder à la console d'administration :[http://localhost:4848]]
+  * Accéder à la console d'administration :[http://localhost:4848]. Naviguez et retrouvez l'EJB déployé faites une impression écran à rendre.
+
 
   * Plus d'information : [http://glassfish.java.net/docs/3.1/quick-start-guide.pdf]
