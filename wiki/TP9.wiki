@@ -1,5 +1,3 @@
-# instruction du TP9 
-
 = TP9 =
 
 == EJB Stateless ==
