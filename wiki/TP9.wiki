@@ -144,5 +144,12 @@ C:\softwares\glassfish3\glassfish\bin>appclient -client  C:\Users\lfo\scm\google
 
   * Accéder à la console d'administration :[http://localhost:4848]. Naviguez et retrouvez l'EJB déployé faites une impression écran à rendre.
 
-
   * Plus d'information : [http://glassfish.java.net/docs/3.1/quick-start-guide.pdf]
+
+=TP9 suite=
+
+== EJB Statefull et Singleton ==
+
+  * Ecrivez un EJB singleton proposant un service de prix.
+
+  * Ecrivez un EJB Statefull prenant en charge la gestion d'un panier.
