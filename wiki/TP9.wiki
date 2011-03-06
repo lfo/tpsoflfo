@@ -135,10 +135,11 @@ Application deployed with name 4jee-jpa-tp9-1.0-SNAPSHOT.
 Command deploy executed successfully.
 }}}
 
-  * Tester avec le client     
+  * Tester avec le client à l'aide de l'Application Client Container   
      
+  En effet le client doit tourner dans un container afin que les EJB puissent y être injectés
 {{{
-  
+C:\softwares\glassfish3\glassfish\bin>appclient -client  C:\Users\lfo\scm\googlecode\tpsoflfo\trunk\4jee-jpa-tp9\target\4jee-jpa-tp9-1.0-SNAPSHOT.jar
 }}}
 
   * Accéder à la console d'administration :[http://localhost:4848]]
