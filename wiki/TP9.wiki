@@ -2,6 +2,8 @@
 
 = TP9 =
 
+== EJB Stateless ==
+
   Créer une couche métier utilisant des EJB stateless gérant les entités des TPs précédents. 
 
 == Solution 1 ==
