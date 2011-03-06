@@ -130,7 +130,7 @@ Command restart-domain executed successfully.
 C:\softwares\glassfish3\bin>asadmin ping-connection-pool H2Pool
 Command ping-connection-pool executed successfully.
 
-C:\softwares\glassfish3\bin>asadmin --force=true deploy C:\Users\lfo\scm\googlecode\tpsoflfo\trunk\4jee-jpa-tp9\target\4jee-jpa-tp9-1.0-SNAPSHOT.jar
+C:\softwares\glassfish3\bin>asadmin deploy --force=true  C:\Users\lfo\scm\googlecode\tpsoflfo\trunk\4jee-jpa-tp9\target\4jee-jpa-tp9-1.0-SNAPSHOT.jar
 Application deployed with name 4jee-jpa-tp9-1.0-SNAPSHOT.
 Command deploy executed successfully.
 }}}
