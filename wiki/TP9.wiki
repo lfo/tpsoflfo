@@ -73,7 +73,23 @@ Configuration des différents environnements. En effet, il est nécessaire de g�
 
 [http://docs.codehaus.org/display/MAVENUSER/Multi-modules+projects]
 
-Il  s'agit ici d'un EJB simplement, le packaging jar est suffisant.
+Il  s'agit ici d'un EJB et de son client, le packaging jar est donc suffisant. l'EJB sera reconnu par le container grâce aux annotations.
+Néanmoins, la classe Main doit être connue, pour cela il faut configurer le plugin jar dans le POM:
+
+{{{
+<plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-jar-plugin</artifactId>
+	<configuration>
+		<archive>
+			<manifest>
+				<mainClass>com.ingesup.jee4.tp9.Main</mainClass>
+			</manifest>
+		</archive>
+	</configuration>
+</plugin>
+}}}
+
 
 == Un conteneur de déploiement ==
 
@@ -103,7 +119,7 @@ Installation et exécution de Glassfish
   * Ajouter la librairie {{{$Home\.m2\repository\com\h2database\h2\1.2.143\h2-1.2.143.jar}}}
 dans {{{path_to_glassfish3\glassfish\domains\domain1\lib\ext}}}
 
-  * Déploiement de l'application packagée
+  * Déployer l'application packagée
 
 {{{
 
@@ -119,6 +135,11 @@ Application deployed with name 4jee-jpa-tp9-1.0-SNAPSHOT.
 Command deploy executed successfully.
 }}}
 
+  * Tester avec le client
+     
+      * configurer maven pour ajouter 
+{{{
+  
   * Accéder à la console d'administration :[http://localhost:4848]]
 
   * Plus d'information : [http://glassfish.java.net/docs/3.1/quick-start-guide.pdf]
