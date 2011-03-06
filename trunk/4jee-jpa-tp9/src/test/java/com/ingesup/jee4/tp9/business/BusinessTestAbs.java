@@ -14,26 +14,26 @@ import org.junit.BeforeClass;
  */
 public class BusinessTestAbs {
 
-    
-    private static EJBContainer ec;
-    private static Context ctx;
+    protected static EJBContainer ec;
+    protected static Context ctx;
 
     // ======================================
     // =          Lifecycle Methods         =
     // ======================================
-
     @BeforeClass
     public static void initContainer() throws Exception {
         Map<String, Object> properties = new HashMap<String, Object>();
         properties.put(EJBContainer.MODULES, new File("target/classes"));
+        properties.put("org.glassfish.ejb.embedded.glassfish.installation.root",
+                "./target/test-classes/glassfish");
         ec = EJBContainer.createEJBContainer(properties);
         ctx = ec.getContext();
     }
 
     @AfterClass
     public static void closeContainer() throws Exception {
-        if (ec != null)
+        if (ec != null) {
             ec.close();
+        }
     }
-
 }

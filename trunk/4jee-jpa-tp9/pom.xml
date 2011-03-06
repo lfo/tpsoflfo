@@ -19,6 +19,21 @@
             <url>http://download.java.net/maven/glassfish</url>
         </repository>       
     </repositories>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.ingesup.jee4.tp9.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -41,6 +56,13 @@
             <groupId>org.glassfish.extras</groupId>
             <artifactId>glassfish-embedded-all</artifactId>
             <version>3.0.1-b20</version>
+            <scope>test</scope>
+        </dependency>
+         <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.ejb</artifactId>
+            <version>3.0</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>
