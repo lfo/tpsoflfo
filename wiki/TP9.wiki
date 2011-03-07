@@ -71,8 +71,6 @@ Configuration des différents environnements. En effet, il est nécessaire de g�
 
 === Packaging ===
 
-[http://docs.codehaus.org/display/MAVENUSER/Multi-modules+projects]
-
 Il  s'agit ici d'un EJB et de son client, le packaging jar est donc suffisant. l'EJB sera reconnu par le container grâce aux annotations.
 Néanmoins, la classe Main doit être connue, pour cela il faut configurer le plugin jar dans le POM:
 
@@ -93,6 +91,7 @@ Néanmoins, la classe Main doit être connue, pour cela il faut configurer le pl
 
 REM : Comme certains tests ne passent pas, il est possible de construire le jar sans passer les tests. Pour cela, il faut lancer Maven via Netbeans en évitant les tests : "Bouton droit projet 4jee-tp9>Custom>Goals" dans la fenêtre lancer le goal "install" et cocher la case "skip-tests".  
 
+Plus d'infos : [http://docs.codehaus.org/display/MAVENUSER/Multi-modules+projects]
 
 === Un conteneur de déploiement ===
 
