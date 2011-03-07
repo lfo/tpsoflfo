@@ -55,7 +55,7 @@
         <dependency>
             <groupId>org.glassfish.extras</groupId>
             <artifactId>glassfish-embedded-all</artifactId>
-            <version>3.0.1-b20</version>
+            <version>3.0</version>
             <scope>test</scope>
         </dependency>
          <dependency>
