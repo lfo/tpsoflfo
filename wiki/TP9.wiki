@@ -36,7 +36,7 @@ Configuration des différents environnements. En effet, il est nécessaire de g�
 	<dependency>
 		<groupId>org.glassfish.extras</groupId>
 		<artifactId>glassfish-embedded-all</artifactId>
-		<version>3.1-b41</version>
+		<version>3.0</version>
 	</dependency>
 </dependencies>
 
