@@ -148,6 +148,20 @@ $Glassfish_home\glassfish\bin\appclient -client  \4jee-jpa-tp9\target\4jee-jpa-t
 
 == EJB Statefull et Singleton ==
 
-  * Ecrivez un EJB singleton proposant un service de prix.
+  * Ecrivez un EJB singleton proposant un service de prix Random ou constante me suffit. 
 
-  * Ecrivez un EJB Statefull prenant en charge la gestion d'un panier.
+{{{
+   @Singleton
+   public class public PriceGenerator {
+      public Double getPrice(String title) {
+         // TODO
+      }
+   }
+}}}
+
+}}}
+
+  * Ecrivez un EJB Statefull prenant en charge la gestion d'un panier. On peut rajouter autant de livre que nous voulons dans le panier. 
+
+La validation du panier consiste à calculer le prix (somme des prix obtenus par le singleton) et supprime le livre de la base. 
+Utilisez ce Singleton dans le BookEJB pour le clacule du prix final.
