@@ -25,7 +25,7 @@ public class BusinessTestAbs {
         Map<String, Object> properties = new HashMap<String, Object>();
         properties.put(EJBContainer.MODULES, new File("target/classes"));
         properties.put("org.glassfish.ejb.embedded.glassfish.installation.root",
-                "./target/test-classes/glassfish");
+                "./src/test/resources/glassfish");
         ec = EJBContainer.createEJBContainer(properties);
         ctx = ec.getContext();
     }
