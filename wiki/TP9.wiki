@@ -90,6 +90,10 @@ Néanmoins, la classe Main doit être connue, pour cela il faut configurer le pl
 </plugin>
 }}}
 
+
+REM : Comme certains tests ne passent pas, il est possible de construire le jar sans passer les tests. Pour cela, il faut lancer Maven via Netbeans en évitant les tests : "Bouton droit projet 4jee-tp9>Custom>Goals" dans la fenêtre lancer le goal "install" et cocher la case "skip-tests".  
+
+
 === Un conteneur de déploiement ===
 
 Installation et exécution de Glassfish
