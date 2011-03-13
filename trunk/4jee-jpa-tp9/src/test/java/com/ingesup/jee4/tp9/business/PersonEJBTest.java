@@ -1,7 +1,7 @@
 package com.ingesup.jee4.tp9.business;
 
 import com.ingesup.jee4.tp9.persistence.Person;
-import com.ingesup.jee4.tp9.persistence.PersonDAOTest;
+
 import java.util.List;
 import javax.naming.NamingException;
 import junit.framework.Assert;
@@ -13,14 +13,19 @@ import org.junit.Test;
  */
 public class PersonEJBTest extends BusinessTestAbs {
 
+    public final static String JACQUES = "Jacques";
+    public final static String SMITH = "Smith";
+    
     @Test
     public void testInit() throws NamingException {
         PersonEJBRemote personEJB = (PersonEJBRemote) ctx.lookup("java:global/classes/PersonEJB");
         Assert.assertNotNull(personEJB);
         
-        personEJB.create(PersonDAOTest.JACQUES, PersonDAOTest.SMITH);
+        personEJB.create(JACQUES, SMITH);
         List<Person> persons = personEJB.getAllPersons();
-        Assert.assertTrue(persons.size() > 0);
+        int size = persons.size();
+        Assert.assertTrue(size > 0);
+                
     }
     
 }

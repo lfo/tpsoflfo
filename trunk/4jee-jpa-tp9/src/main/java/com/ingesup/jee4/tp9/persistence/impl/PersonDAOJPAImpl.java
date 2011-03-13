@@ -29,11 +29,8 @@ public class PersonDAOJPAImpl implements PersonDAO {
 
     @Override
     public void delete(Person person) throws DAOException {
-        EntityTransaction tx = entityManager.getTransaction();
-        tx.begin();
         Person personToDelete = entityManager.getReference(Person.class, person.getId());
-        entityManager.remove(personToDelete);
-        tx.commit();
+        entityManager.remove(personToDelete);       
     }
 
     @Override
@@ -54,11 +51,7 @@ public class PersonDAOJPAImpl implements PersonDAO {
 
     @Override
     public Person updatePerson(Person person) throws DAOException {
-        EntityTransaction tx = entityManager.getTransaction();
-        tx.begin();
         entityManager.merge(person);
-        tx.commit();
-        return person;
-        
+        return person;        
     }
 }
