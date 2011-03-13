@@ -1,4 +1,4 @@
-= Enoncé =
+= Énoncé =
 
  Créer un MDB permettant la gestion d'un ordre d'achat. 
 
