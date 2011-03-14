@@ -1,6 +1,7 @@
 = Énoncé =
 
- Créer un MDB permettant la gestion d'un ordre d'achat. 
+  Créer un MDB permettant de lancer la gestion de l'ordre d'achat à un système de gestion de stock.  
+  Créer un MDB de notification de réception de commande.
 
 = Détails =
 TODO
