@@ -18,6 +18,8 @@
         <module>4jee-jpa-tp8</module>
         <module>4jee-jpa-tp8-correction</module>
         <module>4jee-jpa-tp9</module>
+        <module>4jee-jpa-tp9-correction</module>
+        <module>4jee-jpa-tp9-webapp</module>
     </modules>
     <repositories>
         <repository>
