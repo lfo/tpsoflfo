@@ -1,15 +1,20 @@
-package com.ingesup.jee4.tp9.persistence;
+package com.ingesup.jee4.tp9.business;
 
+import com.ingesup.jee4.tp9.persistence.Book;
+import com.ingesup.jee4.tp9.persistence.DAOException;
+import com.ingesup.jee4.tp9.persistence.Person;
 import java.util.List;
+import javax.ejb.Local;
 
 /**
  *
  * @author lforet
  */
-public interface BookDAO {
+@Local
+public interface BookEJBLocal {
 
     public List<Book> getAllBooks();
-    
+
     public Book persistBook(Book book);
 
     public Book updateBook(Book book);
@@ -21,5 +26,4 @@ public interface BookDAO {
     public Person getOwner(Book book);
 
     public List<Person> getAuthors(Book book);
-    
 }

@@ -17,7 +17,7 @@ public class PersonEJBTest extends BusinessTestAbs {
     public final static String SMITH = "Smith";
     
     @Test
-    public void testInit() throws NamingException {
+    public void testCreate() throws NamingException {
         PersonEJBRemote personEJB = (PersonEJBRemote) ctx.lookup("java:global/classes/PersonEJB");
         Assert.assertNotNull(personEJB);
         

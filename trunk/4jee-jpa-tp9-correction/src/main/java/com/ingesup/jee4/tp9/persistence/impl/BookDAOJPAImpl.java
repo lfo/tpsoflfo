@@ -6,7 +6,6 @@ import com.ingesup.jee4.tp9.persistence.DAOException;
 import com.ingesup.jee4.tp9.persistence.Person;
 import java.util.List;
 import javax.persistence.EntityManager;
-import javax.persistence.EntityTransaction;
 import javax.persistence.Query;
 
 /**
@@ -22,7 +21,7 @@ public class BookDAOJPAImpl implements BookDAO {
     }
 
     @Override
-    public List<Book> getAllBooks() throws DAOException {
+    public List<Book> getAllBooks() {
         Query query = entityManager.createNamedQuery("allBooks");
         List<Book> toReturn = query.getResultList();
         return toReturn;
@@ -65,19 +64,21 @@ public class BookDAOJPAImpl implements BookDAO {
 
     @Override
     public Book persistBook(Book book) {
-        EntityTransaction tx = entityManager.getTransaction();
-        tx.begin();
         entityManager.persist(book);
-        tx.commit();
         return book;
     }
 
     @Override
     public Book updateBook(Book book) {
-        EntityTransaction tx = entityManager.getTransaction();
-        tx.begin();
         entityManager.persist(book);
-        tx.commit();
         return book;
     }
+
+    @Override
+    public void removeBook(Book book) {
+        Book managedBook = entityManager.find(Book.class , book.getId());     
+        entityManager.remove(managedBook);
+    }
+    
+    
 }
