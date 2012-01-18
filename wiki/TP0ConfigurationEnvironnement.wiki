@@ -26,4 +26,24 @@ javac 1.7.0_01
     * Vérifier la variable d’environnement {{{PATH}}}
       Elle doit contenir %JAVA_HOME%\bin
 
-= Installation de 
+= Installation de Netbeans = 
+
+Netbeans est un IDE open-source d'Oracle. C'est l'outil de référence pour les développements JSE et JEE.
+
+  * Télécharger la version JEE : [http://netbeans.org/downloads]
+  * Suivre les instructions d'installation.
+
+== Raccourcis claviers ==
+
+  Voici quelques raccourcis claviers à connaître :
+  * Auto compléter : <ctl> + <spc>
+  * Fixer les imports : <shft> + <ctl> + i
+  * Reformater : <alt> + <shft> + f
+  * Insérer du code : <alt> + <ins>
+  * Exécuter une classe : <shft> + <F6>
+  * Exécuter un test : <ctl> + <F6>
+  
+  
+= Installation de Maven =
+
+
