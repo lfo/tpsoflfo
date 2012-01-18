@@ -2,7 +2,7 @@
 
 = Introduction =
 
-  Pour l'ensemble des TPs nous allons utiliser tout d'abord un kit de développement Java, (JDK), mais aussi un environnement de développement intégré (IDE), et finalement un outil de construction tel que Maven.
+  Pour l'ensemble des TPs nous allons utiliser tout d'abord un kit de développement Java, (JDK), mais aussi un environnement de développement intégré (IDE), et un outil de construction tel que Maven. Finalement, pour gérer l'ensemble de nos données nous utiliserons une base de données H2.
 
 = Installation du JDK =
 
@@ -36,14 +36,39 @@ Netbeans est un IDE open-source d'Oracle. C'est l'outil de référence pour les 
 == Raccourcis claviers ==
 
   Voici quelques raccourcis claviers à connaître :
-  * Auto compléter : <ctl> + <spc>
-  * Fixer les imports : <shft> + <ctl> + i
-  * Reformater : <alt> + <shft> + f
-  * Insérer du code : <alt> + <ins>
-  * Exécuter une classe : <shft> + <F6>
-  * Exécuter un test : <ctl> + <F6>
+  * Auto compléter : {{{<ctl> + <spc>}}}
+  * Fixer les imports : {{{<shft> + <ctl> + i}}}
+  * Reformater : {{{<alt> + <shft> + f}}}
+  * Insérer du code : {{{<alt> + <ins>}}}
+  * Exécuter une classe : {{{<shft> + <F6>}}}
+  * Exécuter un test : {{{<ctl> + <F6>}}}
   
   
 = Installation de Maven =
 
+  Maven est un outil de gestion de projet il est accessible ici : [http://maven.apache.org/]
 
+  Nous utiliserons l'installation embedded de Netbeans de Maven. Il n'y a donc rien de particulier à faire.
+
+= Installation de H2 = 
+
+H2 est un SGBDR Open-source disponible ici : [http://h2database.com]
+ 
+Pour son installation, le plus simple est de déclarer la dépendance dans un projet Maven.
+{{{
+...
+<dependency>
+   <groupId>com.h2database</groupId>
+   <artifactId>h2</artifactId>
+   <version>1.3.163</version>
+</dependency>
+...
+}}}
+
+  Puis à la première construction du projet la dépendance sera résolue
+
+Exécution :
+
+{{{
+java -jar %HOMEPATH%\.m2\repository\com\h2database\h2\1.3.163\h2-1.3.163.jar
+}}}
