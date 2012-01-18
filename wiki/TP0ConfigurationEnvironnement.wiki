@@ -15,10 +15,15 @@ java version "1.7.0_01"
 Java(TM) SE Runtime Environment (build 1.7.0_01-b08)
 Java HotSpot(TM) 64-Bit Server VM (build 21.1-b02, mixed mode)
 }}}
-  * * Vérifier l'environnement de compilation (JDK) :
+  * Vérifier l'environnement de compilation (JDK) :
 {{{
 $ javac -version
 javac 1.7.0_01
 }}}
+  * En cas de problème
+    * Vérifier la variable d’environnement JAVA_HOME.
+      Elle doit pointer vers le répertoire d’installation du JDK
+    * Vérifier la variable d’environnement PATH
+      Elle doit contenir %JAVA_HOME%\bin
 
 = Installation de 
