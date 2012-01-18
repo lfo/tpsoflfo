@@ -21,9 +21,9 @@ $ javac -version
 javac 1.7.0_01
 }}}
   * En cas de problème
-    * Vérifier la variable d’environnement JAVA_HOME.
+    * Vérifier la variable d’environnement {{{JAVA_HOME}}}.
       Elle doit pointer vers le répertoire d’installation du JDK
-    * Vérifier la variable d’environnement PATH
+    * Vérifier la variable d’environnement {{{PATH}}}
       Elle doit contenir %JAVA_HOME%\bin
 
 = Installation de 
