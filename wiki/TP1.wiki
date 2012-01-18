@@ -1,6 +1,6 @@
 #Premier programme JDBC
 
-= Ennoncé =
+= Enoncé =
 
 Ecrire un programme permettant de lister les noms et prénoms des personnes contenues dans une table PERSON
 
