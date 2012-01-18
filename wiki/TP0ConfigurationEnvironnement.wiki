@@ -1,0 +1,12 @@
+#Configuration de l'environnement des TPs 
+
+= Introduction =
+
+  Pour l'ensemble des TPs nous allons utiliser tout d'abord un kit de développement Java, (JDK), mais aussi un environnement de développement intégré (IDE), et finalement un outil de construction tel que Maven.
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
