@@ -50,6 +50,9 @@ Netbeans est un IDE open-source d'Oracle. C'est l'outil de référence pour les 
 
   Nous utiliserons l'installation embedded de Netbeans de Maven. Il n'y a donc rien de particulier à faire.
 
+Une petite présentation de Maven est accessible ici :
+https://docs.google.com/present/edit?id=0AXzSbwztW7gyZGN2ODdyMmRfNjBkcDdxdGtkNg
+
 = Installation de H2 = 
 
 H2 est un SGBDR Open-source disponible ici : [http://h2database.com]
