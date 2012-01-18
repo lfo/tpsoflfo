@@ -93,7 +93,7 @@ public class PersonDAOImpl implements PersonDAO {
                     statement.close();
                 }
             } catch (SQLException sqlEx) {
-                // je ne fais rien , car j'ai essayé.
+                // je ne fais rien , car j'ai essayÃ©
             }
         }
     }
@@ -117,14 +117,14 @@ public class PersonDAOImpl implements PersonDAO {
                 try {
                     result.close();
                 } catch (SQLException sqlEx) {
-                    // je ne fais rien , car j'ai essayé.
+                    // je ne fais rien , car j'ai essayÃ©.
                 }
             }
             if (statement != null) {
                 try {
                     statement.close();
                 } catch (SQLException sqlEx) {
-                    // je ne fais rien , car j'ai essayé.
+                    // je ne fais rien , car j'ai essayÃ©.
                 }
             }
 
