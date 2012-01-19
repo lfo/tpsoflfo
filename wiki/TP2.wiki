@@ -8,7 +8,7 @@ Ecrire un DAO (interface + implémentation) utilisant JDBC et fournissant les se
  * Ajout d’une Person
  * Modifier le lastName d’une Person
  * Supprimer une Person
-[http://code.google.com/p/tpsoflfo/downloads/detail?name=TP2-ClassDiag.png&can=2&q=]
+[http://tpsoflfo.googlecode.com/files/TP2-ClassDiag.png]
 = Instructions =
 
  * Créer l'interface fr.devcoop.jee.tp2.PersonDAO qui doit proposer les méthodes permettant de rendre les services demandés.
@@ -37,3 +37,13 @@ Ecrire un DAO (interface + implémentation) utilisant JDBC et fournissant les se
   L'initialisation de la connexion pourra se faire dans le constructeur. Pour les méthodes de lecture, utiliser le ResultSet et créer un objet Person à chaque itération.
   
  * Utiliser cette implémentation dans la classe Client pour la tester.
+
+== Pour aller plus loin ==
+
+ * Utiliser un fichier properties pour initialiser la connexion.
+ * Ajouter une gestion des exceptions.
+ * Transformer la classe Main en une classe de test utilisant JUnit 4.
+    * Utiliser les assertions.
+     Ressources : 
+﻿      * [http://junit.sourceforge.net/doc/cookbook/cookbook.htm]
+      * [http://netbeans.org/kb/docs/java/junit-intro.html]
