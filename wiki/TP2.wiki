@@ -9,9 +9,32 @@ Ecrire un DAO (interface + implémentation) utilisant JDBC et fournissant les se
  * Modifier le lastName d’une Person
  * Supprimer une Person
 
-= Details =
+= Instructions =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+ * Créer l'interface fr.devcoop.jee.tp2.PersonDAO qui doit proposer les méthodes permettant de rendre les services demandés.
+
+  Exemple :
+{{{
+        public List<Person> getPersons();
+}}}
+
+ * Créer l'objet métier (javabean) fr.devcoop.jee.tp2.Person
+    * Surcharger sa méthode toString()
+{{{
+   public String toString() {
+     return firstName + “ “ + lastName;
+   }
+}}}
+ 
+ * Créer la classe fr.devcoop.tp2.PersonDAOImpl : cette classe implémente l'interface PersonDAO 
+
+ * Créer la table PERSON dans H2 en utilisant la web console.
+
+  On pourra utiliser une colonne identity pour les identifiants uniques, Cf. [http://h2database.com/html/datatypes.html#identity_type]
+ 
+ * Utiliser JDBC pour implémenter chacune des méthodes
+
+  L'initialisation de la connexion pourra se faire dans le constructeur
+  Pour les méthodes de lecture, utiliser le ResultSet et créer un objet Person à chaque itération.
+  
+ * Utiliser cette implémentation dans la classe Client pour la tester.
