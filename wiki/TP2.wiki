@@ -1,0 +1,17 @@
+#Mise en oeuvre du pattern DAO
+
+= Énoncé TP2 DAO =
+
+Ecrire un DAO (interface + implémentation) utilisant JDBC et fournissant les services suivants :
+ * Liste des Person
+ * Liste des Person dont le lastName commence par prefix
+ * Ajout d’une Person
+ * Modifier le lastName d’une Person
+ * Supprimer une Person
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
