@@ -1,7 +1,7 @@
-#Utilisation des PreparedStatement
+#Utilisation des {{{PreparedStatement}}}
 
 = Introduction =
 
-Modifier le code du TP2 afin d’utiliser les PreparedStatement là où cela est nécessaire
+Modifier le code du TP2 afin d’utiliser les {{{PreparedStatement}}} là où cela est nécessaire
 
 = Instructions =
