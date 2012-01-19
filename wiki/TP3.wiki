@@ -2,6 +2,6 @@
 
 = Introduction =
 
-Modifier le code du TP2 afin d’utiliser les PreparedStatement là où necessaire
+Modifier le code du TP2 afin d’utiliser les PreparedStatement là où cela est nécessaire
 
 = Instructions =
