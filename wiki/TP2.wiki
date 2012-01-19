@@ -15,7 +15,7 @@ Ecrire un DAO (interface + implémentation) utilisant JDBC et fournissant les se
 
   Exemple :
 {{{
-        public List<Person> getPersons();
+   public List<Person> getPersons();
 }}}
 
  * Créer l'objet métier (javabean) fr.devcoop.jee.tp2.Person
@@ -34,7 +34,6 @@ Ecrire un DAO (interface + implémentation) utilisant JDBC et fournissant les se
  
  * Utiliser JDBC pour implémenter chacune des méthodes
 
-  L'initialisation de la connexion pourra se faire dans le constructeur
-  Pour les méthodes de lecture, utiliser le ResultSet et créer un objet Person à chaque itération.
+  L'initialisation de la connexion pourra se faire dans le constructeur. Pour les méthodes de lecture, utiliser le ResultSet et créer un objet Person à chaque itération.
   
  * Utiliser cette implémentation dans la classe Client pour la tester.
