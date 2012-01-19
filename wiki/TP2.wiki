@@ -8,7 +8,7 @@ Ecrire un DAO (interface + implémentation) utilisant JDBC et fournissant les se
  * Ajout d’une Person
  * Modifier le lastName d’une Person
  * Supprimer une Person
-
+[http://code.google.com/p/tpsoflfo/downloads/detail?name=TP2-ClassDiag.png&can=2&q=]
 = Instructions =
 
  * Créer l'interface fr.devcoop.jee.tp2.PersonDAO qui doit proposer les méthodes permettant de rendre les services demandés.
