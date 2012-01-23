@@ -1,0 +1,28 @@
+#Implémenter un DAO avec JPA
+
+= Énonce =
+
+Implémenter le DAO du TP sur JDBC avec JPA :
+
+
+= Instructions =
+
+ * Ajouter les dépendances maven :
+    * org.eclipse.persistence:javax.persistence:2.0.0
+    * org.eclipse.persistence:eclipselink:2.0.1 
+
+ * Créer le persistence unit dans src/main/resources/META-INF (http://www.h2database.com/html/tutorial.html#using_eclipselink)
+
+ * Modifier la classe Person pour lui ajouter les bonnes annotations.
+
+ * Réimplémenter le DAO utilisant un EntityManager 
+
+ * Modifier/Créer la classe de test.
+   * EntityManagerFactory sera créé avant tous les tests
+   * EntityManager sera créé avant chaque test
+
+== Pour aller plus loin ==
+
+ * Créer une entité adresse (numero, rue, codePostal, ville)
+ * Permettre l'ajout d'adresses à une personne
+ * Lister dans la console les adresses d'une personne. 
