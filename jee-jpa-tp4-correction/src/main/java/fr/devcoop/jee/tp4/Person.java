@@ -1,11 +1,23 @@
 package fr.devcoop.jee.tp4;
 
+import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+
 /**
  *
  * @author lforet
  */
-public class Person {
+@Entity
+@Table(name="JPA_PERSON")
+@NamedQuery(name="AllPersons", query="SELECT p FROM Person p")
+public class Person implements Serializable {
 
+    @Id @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
     private String firstName;
     private String lastName;
@@ -15,6 +27,9 @@ public class Person {
         this.lastName = lastName;
     }
 
+    public Person() {
+    }
+    
     public String getFirstName() {
         return firstName;
     }
@@ -43,5 +58,5 @@ public class Person {
     public String toString() {
         return "Person{" + "firstName=" + firstName + "lastName=" + lastName + '}';
     }
-        
+    
 }
