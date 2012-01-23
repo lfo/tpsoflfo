@@ -1,8 +1,8 @@
 #Implémenter un DAO avec JPA
 
-= Énonce =
+= Énoncé =
 
-Implémenter le DAO du TP sur JDBC avec JPA :
+Implémenter le DAO du TP sur JDBC avec JPA.
 
 
 = Instructions =
