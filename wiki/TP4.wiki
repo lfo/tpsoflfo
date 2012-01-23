@@ -18,7 +18,7 @@ Implémenter le DAO du TP sur JDBC avec JPA.
 
  * Réimplémenter le DAO utilisant un {{{EntityManager}}}. 
 
- * Modifier/Créer la classe de test. L'{{{EntityManagerFactory}}} et l'{{{EntityManager}}} sera créé avant l'exécution de la classe de tests ({{{@BeforeClass}}})
+ * Modifier/Créer la classe de test. L'{{{EntityManagerFactory}}} et l'{{{EntityManager}}} seront créés avant l'exécution de la classe de tests ({{{@BeforeClass}}})
   
 
 == Pour aller plus loin ==
