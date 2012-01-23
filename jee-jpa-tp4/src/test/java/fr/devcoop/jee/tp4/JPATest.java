@@ -1,6 +1,5 @@
 package fr.devcoop.jee.tp4;
 
-import fr.devcoop.jee.tp4.Person;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -14,7 +13,7 @@ public class JPATest {
 
     @Test
     public void test() {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("4jee-tp4-pu");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("jee-tp4-pu");
         EntityManager entityManager = emf.createEntityManager();
         Person person = new Person("Pierre", "Dupont");
         entityManager.getTransaction().begin();
