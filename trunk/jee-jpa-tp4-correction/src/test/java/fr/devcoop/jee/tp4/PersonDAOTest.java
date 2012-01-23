@@ -1,11 +1,16 @@
 package fr.devcoop.jee.tp4;
 
-import java.util.List;
+import fr.devcoop.jee.tp4.DAOException;
+import fr.devcoop.jee.tp4.Person;
+import fr.devcoop.jee.tp4.PersonDAOJPAImpl;
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import java.util.List;
 import org.junit.AfterClass;
-import static org.junit.Assert.*;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import static org.junit.Assert.*;
 
 public class PersonDAOTest {
 
@@ -20,7 +25,9 @@ public class PersonDAOTest {
 
     @BeforeClass
     public static void init() throws Exception {
-       throw new UnsupportedOperationException("TODO");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("jee-tp4-pu");
+        entityManager = emf.createEntityManager();
+        personDAO = new PersonDAOJPAImpl(entityManager);
     }
 
     @AfterClass
