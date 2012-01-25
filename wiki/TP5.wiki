@@ -21,3 +21,18 @@ personne :
    Person getOwner(Book book);
    List<Person> getAuthors(Book book);
 }}}
+
+ * Ecrire un test validant le fonctionnement du {{{BookDAO}}}
+ * Ecrire l'implémentation de ce DAO. 
+
+== Scénario de test ==
+
+Les tests valident le scénario suivant :
+ # Pierre Dupont et Paul Durand sont co-auteurs du livre "La foire aux asticots".
+ # Jacques Smith Possède les livres :
+   * "La foire aux asticots"
+   * "La Pelouse"
+   * "Puisque les oiseaux meurent"
+ # Pierre Dupont est aussi l'écrivain de :
+    * "Le Monte-charge"
+    * "L'horrible Monsieur Smith"
