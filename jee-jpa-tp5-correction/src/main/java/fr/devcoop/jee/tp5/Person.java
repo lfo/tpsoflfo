@@ -1,12 +1,16 @@
 package fr.devcoop.jee.tp5;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -20,7 +24,12 @@ public class Person implements Serializable {
     private int id;
     private String firstName;
     private String lastName;
+    @OneToMany(mappedBy = "owner")
+    private List<Book> ownedBooks = new ArrayList<Book>();
+    @ManyToMany(mappedBy = "authors", fetch=FetchType.EAGER)
+    private List<Book> writtenBooks = new ArrayList<Book>();
     
+
     public Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -51,6 +60,22 @@ public class Person implements Serializable {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public List<Book> getOwnedBooks() {
+        return ownedBooks;
+    }
+
+    public void setOwnedBooks(List<Book> ownedBooks) {
+        this.ownedBooks = ownedBooks;
+    }
+
+    public List<Book> getWrittenBooks() {
+        return writtenBooks;
+    }
+
+    public void setWrittenBooks(List<Book> writtenBooks) {
+        this.writtenBooks = writtenBooks;
     }
     
     @Override
