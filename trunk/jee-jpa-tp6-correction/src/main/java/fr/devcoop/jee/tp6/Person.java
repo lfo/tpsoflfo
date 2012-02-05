@@ -25,7 +25,7 @@ public class Person implements Serializable {
     private String firstName;
     private String lastName;
     @OneToMany(mappedBy = "owner")
-    private List<Book> ownedBooks = new ArrayList<Book>();
+    private List<Media> ownedMedia = new ArrayList<Media>();
     @ManyToMany(mappedBy = "authors", fetch=FetchType.EAGER)
     private List<Book> writtenBooks = new ArrayList<Book>();
     
@@ -62,14 +62,14 @@ public class Person implements Serializable {
         this.lastName = lastName;
     }
 
-    public List<Book> getOwnedBooks() {
-        return ownedBooks;
+    public List<Media> getOwnedMedia() {
+        return ownedMedia;
     }
 
-    public void setOwnedBooks(List<Book> ownedBooks) {
-        this.ownedBooks = ownedBooks;
+    public void setOwnedMedia(List<Media> ownedMedia) {
+        this.ownedMedia = ownedMedia;
     }
-
+   
     public List<Book> getWrittenBooks() {
         return writtenBooks;
     }
