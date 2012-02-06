@@ -7,7 +7,7 @@ Implémenter le DAO du TP sur JDBC avec JPA.
 
 = Instructions =
 
- * Ajouter les dépendances maven suivantes :
+ * Ajouter/Vérifier que les dépendances maven suivantes soient présentes dans le projet :
     * org.eclipse.persistence:javax.persistence
     * org.eclipse.persistence:eclipselink
   Rem : Les versions de ces dépendances ont été définies dans le POM parent.
