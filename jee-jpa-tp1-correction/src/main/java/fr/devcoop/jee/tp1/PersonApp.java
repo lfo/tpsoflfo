@@ -16,7 +16,8 @@ import java.util.Properties;
  */
 public class PersonApp {
 
-    public static void main(String... args) throws IOException, SQLException {
+    public static void main(String... args) throws IOException {
+
         InputStream input = ((Class) PersonApp.class).getClassLoader().getResourceAsStream("jdbc.properties");
         Properties properties = new Properties();
         properties.load(input);
@@ -32,21 +33,51 @@ public class PersonApp {
             System.out.println("Vous n'avez pas votre driver dans le classpath.");
         }
 
-        Connection connection = DriverManager.getConnection(jdbcUrl, jdbcUser, jdbcPassword);
-        Statement statement = connection.createStatement();
+        Connection connection = null;
+        Statement statement = null;
+        ResultSet resultSet = null;
+        try {
+            connection = DriverManager.getConnection(jdbcUrl, jdbcUser, jdbcPassword);
+            statement = connection.createStatement();
 
-        ResultSet resultSet = statement.executeQuery("select * from person order by firstname asc");
+            resultSet = statement.executeQuery("select * from person order by firstname asc");
 
-        while (resultSet.next()) {
-            Integer id = resultSet.getInt("ID");
-            String firstName = resultSet.getString(2);
-            String lastName = resultSet.getString(3);
-            System.out.println(String.format("%s %s", firstName, lastName));
+            while (resultSet.next()) {
+                //            Integer id = resultSet.getInt("ID");
+                String firstName = resultSet.getString("FIRSTNAME");
+                String lastName = resultSet.getString("LASTNAME");
+                System.out.println(String.format("%s %s", firstName, lastName));
+            }
+            ResultSetMetaData metaData = resultSet.getMetaData();
+            System.out.println(String.format("Nombre de colonne de ma requete %s", metaData.getColumnCount()));
+            resultSet.close();
+            statement.close();
+            connection.close();
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        } finally {
+            if (resultSet != null) {
+                try {
+                    resultSet.close();
+                } catch (SQLException ex) {
+                    // DO not care
+                }
+            }
+            if (statement != null) {
+                try {
+                    statement.close();
+                } catch (SQLException ex) {
+                    // Do not care
+                }
+            }
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (SQLException ex) {
+                    // do not care
+                }
+            }
+
         }
-        ResultSetMetaData metaData = resultSet.getMetaData();
-        System.out.println(String.format("Nombre de colonne de ma requete %s", metaData.getColumnCount()));
-        resultSet.close();
-        statement.close();
-        connection.close();
     }
 }
