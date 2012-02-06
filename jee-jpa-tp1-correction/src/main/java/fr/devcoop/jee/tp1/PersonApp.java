@@ -44,8 +44,8 @@ public class PersonApp {
 
             while (resultSet.next()) {
                 //            Integer id = resultSet.getInt("ID");
-                String firstName = resultSet.getString(2);
-                String lastName = resultSet.getString(3);
+                String firstName = resultSet.getString("FIRSTNAME");
+                String lastName = resultSet.getString("LASTNAME");
                 System.out.println(String.format("%s %s", firstName, lastName));
             }
             ResultSetMetaData metaData = resultSet.getMetaData();
