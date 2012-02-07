@@ -1,6 +1,6 @@
-= TP9 =
+= TP9 EJB Premier pas=
 
-== EJB Stateless ==
+== Énoncé ==
 
   Créer une couche métier utilisant des EJB stateless gérant les entités des TPs précédents. 
 
@@ -81,7 +81,7 @@ Néanmoins, la classe Main doit être connue, pour cela il faut configurer le pl
 	<configuration>
 		<archive>
 			<manifest>
-				<mainClass>com.ingesup.jee4.tp9.Main</mainClass>
+				<mainClass>fr.devcoop.jee.tp9.Main</mainClass>
 			</manifest>
 		</archive>
 	</configuration>
@@ -97,7 +97,7 @@ Plus d'infos : [http://docs.codehaus.org/display/MAVENUSER/Multi-modules+project
 
 Installation et exécution de Glassfish
 
-  * Télécharger [http://glassfish.java.net/downloads/3.1-final.html]  
+  * Télécharger [http://glassfish.java.net/downloads]  
 
   * Installer la configuration standard
  
@@ -136,7 +136,7 @@ $Glassfish_home\bin\asadmin deploy --force=true  \4jee-jpa-tp9\target\4jee-jpa-t
      
   En effet le client doit tourner dans un container afin que les EJB puissent y être injectés
 {{{
-$Glassfish_home\glassfish\bin\appclient -client  \4jee-jpa-tp9\target\4jee-jpa-tp9-1.0-SNAPSHOT.jar
+$Glassfish_home\glassfish\bin\appclient -client  \jee-tp9\target\jee-tp9-1.0-SNAPSHOT.jar
 }}}
 
   * Accéder à la console d'administration :[http://localhost:4848]. Naviguez et retrouvez l'EJB déployé faites une impression écran à rendre.
