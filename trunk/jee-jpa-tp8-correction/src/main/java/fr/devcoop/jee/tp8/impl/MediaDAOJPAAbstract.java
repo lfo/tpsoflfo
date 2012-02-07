@@ -4,6 +4,8 @@ import fr.devcoop.jee.tp8.Media;
 import fr.devcoop.jee.tp8.MediaDAO;
 import fr.devcoop.jee.tp8.Media_;
 import fr.devcoop.jee.tp8.Person;
+import fr.devcoop.jee.tp8.Person_;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
@@ -11,6 +13,7 @@ import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Join;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
@@ -61,7 +64,12 @@ public abstract class MediaDAOJPAAbstract<M> implements MediaDAO<M> {
         Predicate titlePredicate = null;
         Predicate andPredicate = null;
         if (authors != null && !authors.isEmpty()) {
-            authorPredicate = p.get(Media_.authors).in(authors);
+            List<Integer> authorIds = new ArrayList<>();
+            for (Person person : authors) {
+                authorIds.add(person.getId());
+            }
+            Join<Media, Person> auth = p.join(Media_.authors);
+            authorPredicate= auth.get(Person_.id).in(authorIds);
             andPredicate = authorPredicate;
         }
         if (titlePrefix != null && !titlePrefix.isEmpty()) {
