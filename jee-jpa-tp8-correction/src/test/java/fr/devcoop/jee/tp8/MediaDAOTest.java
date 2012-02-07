@@ -1,10 +1,5 @@
 package fr.devcoop.jee.tp8;
 
-import fr.devcoop.jee.tp8.Media;
-import fr.devcoop.jee.tp8.Book;
-import fr.devcoop.jee.tp8.Person;
-import fr.devcoop.jee.tp8.DAOException;
-import fr.devcoop.jee.tp8.DVD;
 import java.util.List;
 import javax.persistence.EntityTransaction;
 import org.junit.BeforeClass;
@@ -60,13 +55,16 @@ public class MediaDAOTest extends TestAbs {
         medias = dvdDAO.findBy(MEGAMIND, null);
         assertEquals(1, medias.size());
 
-        List<Person> authors = personDAO.findAllWithPrefixLastName(PersonDAOTest.DUPONT);
+        List<Person> authors = personDAO.findAllWithPrefixLastName("Du");
         List<Media> books = bookDAO.findBy(null, authors);
         assertEquals(4, books.size());
 
-        
-//        List<Media> books = bookDAO.findBy(LA_FOIRE_AUX_ASTICOTS, authors);
-//        assertEquals(1, books.size());
+        books = bookDAO.findBy(LA_FOIRE_AUX_ASTICOTS, authors);
+        assertEquals(2, books.size());
+
+        authors = personDAO.findAllWithPrefixLastName(PersonDAOTest.DUPONT);
+        books = bookDAO.findBy(null, authors);
+        assertEquals(3, books.size());
     }
 
     @Test
