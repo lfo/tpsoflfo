@@ -128,7 +128,7 @@ $Glassfish_home\bin\asadmin start-domain
 
 $Glassfish_home\bin\asadmin ping-connection-pool H2Pool
 
-$Glassfish_home\bin\asadmin deploy --force=true  \4jee-jpa-tp9\target\jee-tp9-1.0-SNAPSHOT.jar
+$Glassfish_home\bin\asadmin deploy --force=true  \jee-tp9\target\jee-tp9-1.0-SNAPSHOT.jar
 
 }}}
 
