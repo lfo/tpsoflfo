@@ -118,7 +118,7 @@ Installation et exécution de Glassfish
 
 }}}
 
-  * Ajouter la librairie {{{$Home\.m2\repository\com\h2database\h2\1.2.143\h2-1.2.143.jar}}}
+  * Ajouter la librairie {{{$Home\.m2\repository\com\h2database\h2\1.2.xxx\h2-1.2.xxx.jar}}}
 dans {{{path_to_glassfish3\glassfish\domains\domain1\lib\ext}}}
 
   * Déployer l'application packagée
@@ -128,7 +128,7 @@ $Glassfish_home\bin\asadmin start-domain
 
 $Glassfish_home\bin\asadmin ping-connection-pool H2Pool
 
-$Glassfish_home\bin\asadmin deploy --force=true  \4jee-jpa-tp9\target\4jee-jpa-tp9-1.0-SNAPSHOT.jar
+$Glassfish_home\bin\asadmin deploy --force=true  \4jee-jpa-tp9\target\jee-tp9-1.0-SNAPSHOT.jar
 
 }}}
 
