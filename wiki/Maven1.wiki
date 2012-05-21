@@ -1,0 +1,25 @@
+= Pre-requis =
+
+  * Un JDK installé : [http://www.oracle.com/technetwork/java/javase/downloads/index.html]
+
+  * Maven installé : [http://maven.apache.org/download.html]
+
+  * Vérification de l'installation, {{{mvn -version}}} depuis une ligne de commande.
+
+{{{
+C:\Users\lforet>mvn -version
+Apache Maven 3.0.4 (r1232337; 2012-01-17 09:44:56+0100)
+Maven home: D:\software\apache-maven-3.0.4
+Java version: 1.6.0_30, vendor: Sun Microsystems Inc.
+Java home: C:\Program Files\Java\jdk1.6.0_30\jre
+Default locale: fr_FR, platform encoding: Cp1252
+OS name: "windows 7", version: "6.1", arch: "x86", family: "windows"
+}}}
+
+= Exercice =
+
+  Créer un projet Maven java à l'aide de l'archetype {{{maven-archetype-quickstart}}} :
+
+  * groupe : fr.devcoop.maven
+  * artifact : ex1
+  * version : 1.0-SNAPSHOT
