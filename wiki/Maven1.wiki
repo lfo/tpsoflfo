@@ -18,10 +18,14 @@ OS name: "windows 7", version: "6.1", arch: "x86", family: "windows"
 
 = Exercice =
 
+== Une simple application ==
+
   * Créer un projet Maven java à l'aide de l'archetype {{{maven-archetype-quickstart}}} :
       * groupe : fr.devcoop.maven
       * artifact : ex1
       * version : 1.0-SNAPSHOT
+
+rem : En plus du fichier {{{pom.xml}}} a été généré l'arborescence du projet, mais aussi la classe principale {{{App.java}}}.
 
   * Ecrire l'interface java suivante :
 {{{
@@ -42,3 +46,27 @@ public interface HelloService {
 
   * Implémenter cette interface dans le package {{{fr.devcoop.maven.ex1.impl}}}.
 
+  * Utiliser cette implémentation dans la classe principale {{{App.java}}}.
+
+{{{
+public class App {
+    public static void main( String[] args ) {
+    	HelloService service = new HelloServiceImpl();
+        System.out.println(/*TODO*/));
+    }
+}
+}}}
+
+  * Configurer le plugin "jar" Maven, afin que l'artifact généré lors de la phase de packaging soit exécutable ([http://maven.apache.org/shared/maven-archiver/examples/classpath.html])  
+
+  * Construire l'artifact {{{ex1-1.0-SNAPSHOT.jar}}} :
+
+{{{
+$>mvn package
+}}}
+
+  * Exécuter l'application :
+
+{{{
+$>java -jar ex1-1.0-SNAPSHOT.jar
+}}}
