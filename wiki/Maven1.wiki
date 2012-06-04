@@ -18,8 +18,19 @@ OS name: "windows 7", version: "6.1", arch: "x86", family: "windows"
 
 = Exercice =
 
-  Créer un projet Maven java à l'aide de l'archetype {{{maven-archetype-quickstart}}} :
+  * Créer un projet Maven java à l'aide de l'archetype {{{maven-archetype-quickstart}}} :
 
-  * groupe : fr.devcoop.maven
-  * artifact : ex1
-  * version : 1.0-SNAPSHOT
+    * groupe : fr.devcoop.maven
+    * artifact : ex1
+    * version : 1.0-SNAPSHOT
+
+  * Ecrire l'interface java suivante :
+{{{
+package fr.devcoop.maven.ex1;
+
+public interface HelloService {
+
+	public String hello(String name);
+	
+}
+}}}
