@@ -11,9 +11,11 @@
 
   * Créer un répertoire localement ayant pour nom la première lettre du prénom et le nom complet accolé en minuscule. Exemple : "Laurent Forêt" devient "lforet".
   * Importer (svn import) dans #REPOS_SVN#/branches ce répertoire.
-  * Ajouter (svn add + commit) un fichier readme.txt à ce répertoire.
+  * Ajouter (svn add) un fichier readme.txt à ce répertoire puis propager (svn commit) le dans le repository SVN.
   * Modifier ce fichier et propager (svn commit) le dans le repository SVN.
-  * Créer un tag (svn tag) correspondant au nom du répertoire suffixé par un numéro de version. Exemple : "lforet-1.0"
+  * Créer un tag dans #REPOS_SVN#/tags (svn tag) correspondant au nom du répertoire suffixé par un numéro de version. Exemple : "lforet-1.0"
+  
+  * Récupérer (svn checkout) localement le travail de votre voisin de droite
   
 
 
