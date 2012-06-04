@@ -1,0 +1,23 @@
+#SVN
+
+= Pré-requis =
+
+  * client SVN
+  * TortoiseSVN 
+  * Droit d’écriture sur un repository #REPOS_SVN# 
+
+
+= Énoncé =
+
+  * Créer un répertoire localement ayant pour nom la première lettre du prénom et le nom complet accolé en minuscule. Exemple : "Laurent Forêt" devient "lforet".
+  * Importer (svn import) dans #REPOS_SVN#/branches ce répertoire.
+  * Ajouter (svn add + commit) un fichier readme.txt à ce répertoire.
+  * Modifier ce fichier et propager (svn commit) le dans le repository SVN.
+  * Créer un tag (svn tag) correspondant au nom du répertoire suffixé par un numéro de version. Exemple : "lforet-1.0"
+  
+
+
+= Ressources =
+
+http://www.framalang.org/wiki/Vocabulaire_Subversion
+  
