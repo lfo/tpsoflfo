@@ -71,6 +71,8 @@ $>mvn package
 $>java -jar ex1-1.0-SNAPSHOT.jar
 }}}
 
+== Une application loggable ==
+
   * Ajouter un système de logging dans l'application, pour cela ajouter une nouvelle dépendance vers le système de log choisi, Log4J : 
 
 {{{
@@ -81,6 +83,7 @@ $>java -jar ex1-1.0-SNAPSHOT.jar
 </dependency>
 }}}
 
+  * Utiliser cette nouvelle librairie dans le code de l'application :
 
 == Une application testable ==
 
@@ -95,7 +98,11 @@ $>java -jar ex1-1.0-SNAPSHOT.jar
 </dependency>
 }}}
 
-  * Que signifie ici le scope test
+  * Que signifie ici le scope test ?
+
+  * Ecrire un test unitaire qui valide le comportement de notre implémentation d'{{{HelloService}}}.
+
+ 
 == Une application web ==
 
 * Créer un nouveau projet Maven à l'aide de l'archetype {{{maven-archetype-webapp}}} :
@@ -105,12 +112,19 @@ $>java -jar ex1-1.0-SNAPSHOT.jar
 
 * Ecrire une servlet ...
 
-
 == Un POM pour les gouverner tous ==
 
 * créer l'arborescence suivante :
 
-  + hello-parent
-       +-- hello
-            +-- src
-            +-- test
++-- hello-parent
+    +-- hello
+         +-- src
+         +-- test
+         + pom.xml
+    +-- hello-web
+         +-- src
+         + pom.xml
+    +-- pom.xml
+
+ 
+       
