@@ -105,17 +105,18 @@ $>java -jar ex1-1.0-SNAPSHOT.jar
  
 == Une application web ==
 
-* Créer un nouveau projet Maven à l'aide de l'archetype {{{maven-archetype-webapp}}} :
+  * Créer un nouveau projet Maven à l'aide de l'archetype {{{maven-archetype-webapp}}} :
       * groupe : fr.devcoop.maven
       * artifact : hello-web
       * version : 1.0-SNAPSHOT
 
-* Ecrire une servlet ...
+  * Ecrire une servlet 
 
 == Un POM pour les gouverner tous ==
 
-* créer l'arborescence suivante :
+  * créer l'arborescence suivante :
 
+{{{
 +-- hello-parent
     +-- hello
          +-- src
@@ -125,6 +126,6 @@ $>java -jar ex1-1.0-SNAPSHOT.jar
          +-- src
          + pom.xml
     +-- pom.xml
-
+}}}
  
        
