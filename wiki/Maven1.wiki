@@ -22,14 +22,14 @@ OS name: "windows 7", version: "6.1", arch: "x86", family: "windows"
 
   * Créer un projet Maven java à l'aide de l'archetype {{{maven-archetype-quickstart}}} :
       * groupe : fr.devcoop.maven
-      * artifact : ex1
+      * artifact : hello
       * version : 1.0-SNAPSHOT
 
 rem : En plus du fichier {{{pom.xml}}} a été généré l'arborescence du projet, mais aussi la classe principale {{{App.java}}}.
 
   * Ecrire l'interface java suivante :
 {{{
-package fr.devcoop.maven.ex1;
+package fr.devcoop.maven.hello;
 
 public interface HelloService {
 
@@ -44,7 +44,7 @@ public interface HelloService {
 }
 }}}
 
-  * Implémenter cette interface dans le package {{{fr.devcoop.maven.ex1.impl}}}.
+  * Implémenter cette interface dans le package {{{fr.devcoop.maven.hello.impl}}}.
 
   * Utiliser cette implémentation dans la classe principale {{{App.java}}}.
 
@@ -59,7 +59,7 @@ public class App {
 
   * Configurer le plugin "jar" Maven, afin que l'artifact généré lors de la phase de packaging soit exécutable ([http://maven.apache.org/shared/maven-archiver/examples/classpath.html])  
 
-  * Construire l'artifact {{{ex1-1.0-SNAPSHOT.jar}}} :
+  * Construire l'artifact {{{hello-1.0-SNAPSHOT.jar}}} :
 
 {{{
 $>mvn package
@@ -70,3 +70,47 @@ $>mvn package
 {{{
 $>java -jar ex1-1.0-SNAPSHOT.jar
 }}}
+
+  * Ajouter un système de logging dans l'application, pour cela ajouter une nouvelle dépendance vers le système de log choisi, Log4J : 
+
+{{{
+<dependency>
+   <groupId>log4j</groupId>
+   <artifactId>log4j</artifactId>
+   <version>1.2.16</version>
+</dependency>
+}}}
+
+
+== Une application testable ==
+
+ * Modifier le pom de telle manière à rajouter la dépendance de test :
+
+{{{
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.10</version>
+    <scope>test</scope>
+</dependency>
+}}}
+
+  * Que signifie ici le scope test
+== Une application web ==
+
+* Créer un nouveau projet Maven à l'aide de l'archetype {{{maven-archetype-webapp}}} :
+      * groupe : fr.devcoop.maven
+      * artifact : hello-web
+      * version : 1.0-SNAPSHOT
+
+* Ecrire une servlet ...
+
+
+== Un POM pour les gouverner tous ==
+
+* créer l'arborescence suivante :
+
+  + hello-parent
+       +-- hello
+            +-- src
+            +-- test
