@@ -117,15 +117,15 @@ $>java -jar ex1-1.0-SNAPSHOT.jar
   * créer l'arborescence suivante :
 
 {{{
-+-- hello-parent
-    +-- hello
-         +-- src
-         +-- test
-         + pom.xml
-    +-- hello-web
-         +-- src
-         + pom.xml
-    +-- pom.xml
+hello-parent
+  |-- hello
+  |    |-- src
+  |    |-- test
+  |    ` pom.xml
+  |-- hello-web
+  |    |-- src
+  |    ` pom.xml
+  ` pom.xml
 }}}
  
        
