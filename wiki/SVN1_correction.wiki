@@ -2,7 +2,7 @@
 
 {{{
 $>mkdir lforet
-$>svn import lforet https://tpsoflfo.googlecode.com/svn/trunk/20120621/lfor
+$>svn import lforet https://tpsoflfo.googlecode.com/svn/trunk/20120621/lforet
 
 Committed revision 201.
 
