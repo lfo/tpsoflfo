@@ -11,8 +11,12 @@
 
 Travailler et "historiser" dans son coin :
 
-  * Créer un répertoire localement ayant pour nom la première lettre du prénom et le nom complet accolé en minuscule. Exemple : "Laurent Forêt" devient "lforet".
-  * Importer (svn import) dans #REPOS_SVN#/branches ce répertoire.
+  * Créer un répertoire localement ayant pour nom la première lettre du prénom et le nom complet accolé en minuscule. 
+
+    Exemple : "Laurent Forêt" devient "lforet".
+  
+  * Importer (svn import) dans #REPOS_SVN#/ ce répertoire.
+  * Récupérer (svn checkout) du dépot ce répertoire permettant par la même de récupérer les metadata `.svn`.
   * Ajouter (svn add) un fichier {{{readme.txt}}} à ce répertoire puis propager (svn commit) le dans le repository SVN.
   * Modifier ce fichier et propager (svn commit) le dans le repository SVN.
   * Récupérer et vérifier l'historique (svn log).
