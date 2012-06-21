@@ -1,6 +1,7 @@
 = Correction SVN =
 
  * Créer l'espace de travail
+
 {{{
 $>mkdir lforet
 $>svn import lforet https://tpsoflfo.googlecode.com/svn/trunk/20120621/lforet
@@ -12,6 +13,7 @@ Checked out revision 201.
 }}}
 
  * Ajouter un fichier
+
 {{{
 $>cd lforet
 $\lforet>edit readme.txt
@@ -36,6 +38,7 @@ Committed revision 207.
 }}}
 
  * Récupérer l'historique
+
 {{{
 D:\tmp\lforet>svn log readme.txt
 ------------------------------------------------------------------------
@@ -50,6 +53,7 @@ ajout readme.txt
 }}}
 
  * Analyser les différences
+
 {{{
 $\lforet>svn diff readme.txt -r r202:r207
 Index: readme.txt
