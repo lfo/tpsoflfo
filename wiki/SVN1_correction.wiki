@@ -1,0 +1,21 @@
+= Correction SVN =
+
+{{{
+$>mkdir lforet
+$>svn import lforet https://tpsoflfo.googlecode.com/svn/trunk/20120621/lfor
+
+Committed revision 201.
+
+$>svn checkout https://tpsoflfo.googlecode.com/svn/trunk/20120621/lforet
+Checked out revision 201.
+
+$>cd lforet
+$\lforet>edit readme.txt
+$\lforet>svn add readme.txt
+A         readme.txt
+
+$\lforet>svn commit -m "ajout readme.txt"
+Adding         readme.txt
+Transmitting file data .
+Committed revision 202.
+}}}
