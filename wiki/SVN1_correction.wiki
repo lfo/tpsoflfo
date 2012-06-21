@@ -1,5 +1,6 @@
 = Correction SVN =
 
+ * Créer l'espace de travail
 {{{
 $>mkdir lforet
 $>svn import lforet https://tpsoflfo.googlecode.com/svn/trunk/20120621/lforet
@@ -10,6 +11,7 @@ $>svn checkout https://tpsoflfo.googlecode.com/svn/trunk/20120621/lforet
 Checked out revision 201.
 }}}
 
+ * Ajouter un fichier
 {{{
 $>cd lforet
 $\lforet>edit readme.txt
@@ -27,13 +29,13 @@ $\lforet>edit readme.txt
 $\lforet>svn status readme.txt
 M       readme.txt
 
-
 $\lforet>svn commit -m "modification readme.txt"
 Sending        readme.txt
 Transmitting file data .
 Committed revision 207.
 }}}
 
+ * Récupérer l'historique
 {{{
 D:\tmp\lforet>svn log readme.txt
 ------------------------------------------------------------------------
@@ -47,6 +49,7 @@ ajout readme.txt
 ------------------------------------------------------------------------
 }}}
 
+ * Analyser les différences
 {{{
 $\lforet>svn diff readme.txt -r r202:r207
 Index: readme.txt
@@ -56,4 +59,14 @@ Index: readme.txt
 @@ -1 +1,2 @@
  lforet
 +ajout d une deuxieme ligne
+}}}
+
+ * Créer un tag
+
+{{{
+D:\tmp\lforet>svn copy https://tpsoflfo.googlecode.com/svn/trunk/20120621/lforet https://tpsoflfo.googlecode.com/svn/branches/lforet-1.0 -m "Tag de la version 1.0"
+
+Committed revision 209.
+
+D:\tmp\lforet>
 }}}
