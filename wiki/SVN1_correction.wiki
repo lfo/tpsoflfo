@@ -68,7 +68,7 @@ Index: readme.txt
  * Créer un tag
 
 {{{
-D:\tmp\lforet>svn copy https://tpsoflfo.googlecode.com/svn/trunk/20120621/lforet https://tpsoflfo.googlecode.com/svn/branches/lforet-1.0 -m "Tag de la version 1.0"
+D:\tmp\lforet>svn copy https://tpsoflfo.googlecode.com/svn/trunk/20120621/lforet https://tpsoflfo.googlecode.com/svn/tags/lforet-1.0 -m "Tag de la version 1.0"
 
 Committed revision 209.
 
