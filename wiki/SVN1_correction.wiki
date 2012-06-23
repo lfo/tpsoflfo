@@ -4,7 +4,7 @@
 
 {{{
 $>mkdir lforet
-$>svn import lforet https://tpsoflfo.googlecode.com/svn/trunk/20120621/lforet
+$>svn import lforet https://tpsoflfo.googlecode.com/svn/trunk/20120621/lforet -m "import initial"
 
 Committed revision 201.
 
