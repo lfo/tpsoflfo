@@ -83,7 +83,7 @@ $>java -jar ex1-1.0-SNAPSHOT.jar
 </dependency>
 }}}
 
-  * Utiliser cette nouvelle librairie dans le code de l'application :
+  * Utiliser cette nouvelle librairie dans le code de l'application. Remplacer les System.out par l'usage d'un logger.
 
 == Une application testable ==
 
@@ -105,27 +105,35 @@ $>java -jar ex1-1.0-SNAPSHOT.jar
  
 == Une application web ==
 
-  * Créer un nouveau projet Maven à l'aide de l'archetype {{{maven-archetype-webapp}}} :
-      * groupe : fr.devcoop.maven
-      * artifact : hello-web
-      * version : 1.0-SNAPSHOT
+  * Importer le projet SVN suivant : http://92.243.23.32/svn/agfa/trunk/lforet/helloWorldWebapp
 
-  * Ecrire une servlet 
-
-== Un POM pour les gouverner tous ==
-
-  * créer l'arborescence suivante :
+  * Ecrire une servlet Hello world :
 
 {{{
-hello-parent
-  |-- hello
-  |    |-- src
-  |    |-- test
-  |    ` pom.xml
-  |-- hello-web
-  |    |-- src
-  |    ` pom.xml
-  ` pom.xml
+public class HelloWorldServlet extends HttpServlet {
+    public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException  {
+        PrintWriter out = response.getWriter();
+        out.println("<p>Hello World!</p>");
+        out.close();
+    }
+}
 }}}
  
+
+ * configurer le WEB-INF/web.xml
+{{{
+    <servlet>
+        <servlet-class>TODO</servlet-class>
+        <servlet-name>helloServlet</servlet-name>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>hello</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+}}}
+
+ * exécuter et tester avec jetty :
+{{{
+mvn jetty:run
+}}}
        
