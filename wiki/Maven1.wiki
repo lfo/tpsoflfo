@@ -62,7 +62,7 @@ public class App {
   * Construire l'artifact {{{hello-1.0-SNAPSHOT.jar}}} :
 
 {{{
-$>mvn package
+$>mvn install
 }}}
 
   * Exécuter l'application :
