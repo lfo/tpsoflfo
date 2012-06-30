@@ -35,12 +35,3 @@ Travailler avec votre voisin :
   * Récupérer (svn checkout) localement le travail de votre voisin de droite.
   * Modifier son fichier {{{readme.txt}}} et propager (svn commit) le dans le repository SVN.
   * Attendre et Récupérer (svn update) les modifications de votre voisin de gauche. Gérer les éventuels conflits.
-
-  
-
-
-= Ressources =
-
-  * http://www.framalang.org/wiki/Vocabulaire_Subversion
- 
-  * doc. collabnet 
