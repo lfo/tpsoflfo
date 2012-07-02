@@ -105,6 +105,18 @@ $>java -jar ex1-1.0-SNAPSHOT.jar
 
   * Utiliser cette nouvelle librairie dans le code de l'application. Remplacer les System.out par l'usage d'un logger.
 
+  * Ajouter un fichier log4j.properties dans src/main/resources :
+{{{
+# Root logger option
+log4j.rootLogger=INFO, stdout
+ 
+# Direct log messages to stdout
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.Target=System.out
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%d{ABSOLUTE} %5p %c{1}:%L - %m%n
+}}}
+
 == Une application testable ==
 
  * Modifier le pom de telle manière à rajouter la dépendance de test :
