@@ -104,6 +104,14 @@ $>java -jar ex1-1.0-SNAPSHOT.jar
 }}}
 
   * Utiliser cette nouvelle librairie dans le code de l'application. Remplacer les System.out par l'usage d'un logger.
+ Exemple : 
+
+{{{
+Logger logger = Logger.getLogger(App.class);
+logger.debug("ceci est une trace de debug");
+logger.info("ceci est une trace d'info");
+}}}
+
 
   * Ajouter un fichier log4j.properties dans src/main/resources :
 {{{
