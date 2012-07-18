@@ -5,8 +5,6 @@
   * client SVN collabnet installé 
   * Droit d’écriture sur un repository #REPOS_SVN# 
 
-#REPOS_SVN# = http://92.243.23.32/svn/agfa/trunk/
-
 
 = Énoncé =
 
