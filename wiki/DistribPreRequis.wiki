@@ -1,0 +1,82 @@
+#Prerequis et outils utilisés durant les TPs
+
+= Prerequis =
+
+== Java ==
+
+[http://www.oracle.com/technetwork/java/javase/downloads/index.html]
+
+    * JRE (Java Runtime Environment)?
+{{{
+%> java –version
+java version "1.6.0"
+}}}
+    * JDK (Java Development Kit)?
+{{{
+%> javac –version
+javac 1.6.0
+}}}
+
+En cas de problème :
+
+  * Vérifier la variable d’environnement {{{JAVA_HOME}}}. Elle doit pointer vers le répertoire d’installation du JDK
+  * Vérifier la variable d’environnement PATH Elle doit contenir %JAVA_HOME%\bin
+
+== Netbeans ==
+
+  * [http://netbeans.org]
+  * IDE open-source de Oracle
+  * Outil de référence pour les développements JSE et JEE.
+
+  * Installation : 
+    * Téléchargement
+    * Lancer le programme d'installation.
+    * Suivre les instructions
+
+== Maven ==
+
+  * [http://maven.apache.org]
+  * Outil de gestion de construction
+  * Bien intégré nativement dans Netbeans
+  * Simplifie la vie du développeur
+
+  * Installation : Déjà installé dans Netbeans
+
+
+== Netbeans & Maven ==
+
+  Pour en savoir plus sur l'utilisation de Maven :
+
+  [http://solitarygeek.com/java/netbeans-and-maven-a-quick-start-guide]
+
+= Obtenir les sources des TPs ==
+
+Dans Netbeans>Team>Subversion>Checkout :
+
+  * Repository URL : [http://lformi2011.googlecode.com/svn/trunk]
+
+= Obtenir les Corrections des TPs ==
+
+Dans Netbeans>Team>Subversion>Checkout :
+
+  * Jour1 distrib-prerequis : [http://lformi2011.googlecode.com/svn/branches/corrections/distrib-prerequis-correction/]
+
+  * Jour2 distrib-bookstore-socket : [http://lformi2011.googlecode.com/svn/branches/corrections/distrib-bookstore1-socket/]
+
+  * Jour3 distrib-bookstore1-rmi :  [http://lformi2011.googlecode.com/svn/branches/corrections/distrib-bookstore1-rmi/]
+
+  * Jour3 distrib-bookstore2-correction :  [http://lformi2011.googlecode.com/svn/branches/corrections/distrib-bookstore2-correction/]
+
+  * Jour4 distrib-bookstore3-correction :  [http://lformi2011.googlecode.com/svn/branches/corrections/distrib-bookstore3-correction/]
+
+ * Jour4 distrib-bookstore1-ws :  [http://lformi2011.googlecode.com/svn/branches/corrections/distrib-bookstore1-ws/]
+
+= Parallèle RMI/ Web services ==
+
+  # Dans Netbeans>Team>Subversion>Checkout : [http://lformi2011.googlecode.com/svn/trunk/distrib-ws]
+  # Ouvrir le projet distrib-ws
+  # Réouvrir projet distri-rmi
+  # Lancer les deux exemples
+  # Comparer le code des 2 projets
+  # Comparer les traces d'exécution.
+ 
