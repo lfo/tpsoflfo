@@ -53,27 +53,15 @@ En cas de problème :
 
 Dans Netbeans>Team>Subversion>Checkout :
 
-  * Repository URL : [http://lformi2011.googlecode.com/svn/trunk]
+  * Repository URL : [http://tpsoflfo.googlecode.com/svn/branches/esarc-jse-2012]
 
 = Obtenir les Corrections des TPs ==
 
-Dans Netbeans>Team>Subversion>Checkout :
+ svn update
 
-  * Jour1 distrib-prerequis : [http://lformi2011.googlecode.com/svn/branches/corrections/distrib-prerequis-correction/]
-
-  * Jour2 distrib-bookstore-socket : [http://lformi2011.googlecode.com/svn/branches/corrections/distrib-bookstore1-socket/]
-
-  * Jour3 distrib-bookstore1-rmi :  [http://lformi2011.googlecode.com/svn/branches/corrections/distrib-bookstore1-rmi/]
-
-  * Jour3 distrib-bookstore2-correction :  [http://lformi2011.googlecode.com/svn/branches/corrections/distrib-bookstore2-correction/]
-
-  * Jour4 distrib-bookstore3-correction :  [http://lformi2011.googlecode.com/svn/branches/corrections/distrib-bookstore3-correction/]
-
- * Jour4 distrib-bookstore1-ws :  [http://lformi2011.googlecode.com/svn/branches/corrections/distrib-bookstore1-ws/]
 
 = Parallèle RMI/ Web services ==
 
-  # Dans Netbeans>Team>Subversion>Checkout : [http://lformi2011.googlecode.com/svn/trunk/distrib-ws]
   # Ouvrir le projet distrib-ws
   # Réouvrir projet distri-rmi
   # Lancer les deux exemples
