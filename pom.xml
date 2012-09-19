@@ -14,7 +14,7 @@
         <module>distrib-bookstore1</module>
         <module>distrib-bookstore1-socket</module>
         <module>distrib-rmi</module>
-        <module>distrib-bookstore1-rmi</module>
+        <module>distrib-bookstore1-rmi-enonce</module>
         <!--<module>distrib-bookstore1-rmi-correction</module>-->
         <module>distrib-bookstore2</module>
         <!--<module>distrib-bookstore2-correction</module>-->
