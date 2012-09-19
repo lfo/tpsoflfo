@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>fr.devcoop.jse.distrib</groupId>
@@ -14,12 +14,13 @@
         <module>distrib-bookstore1</module>
         <module>distrib-bookstore1-socket</module>
         <module>distrib-rmi</module>
-        <!--<module>distrib-bookstore1-rmi</module>-->
+        <module>distrib-bookstore1-rmi</module>
+        <!--<module>distrib-bookstore1-rmi-correction</module>-->
         <module>distrib-bookstore2</module>
         <!--<module>distrib-bookstore2-correction</module>-->
         <!--<module>distrib-bookstore3-correction</module>--> 
         <module>distrib-ws</module>
         <!--<module>distrib-bookstore1-ws</module>-->
-  </modules>
+    </modules>
     
 </project>
