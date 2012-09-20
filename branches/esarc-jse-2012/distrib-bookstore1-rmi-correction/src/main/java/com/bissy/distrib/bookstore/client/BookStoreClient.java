@@ -10,7 +10,7 @@ import java.util.Collection;
 import com.bissy.distrib.bookstore.Book;
 import com.bissy.distrib.bookstore.BookStoreService;
 
-public class BookStoreClient implements BookStoreService {
+public class BookStoreClient  {
 
     public final static String RMI_SERVICE_NAME = "rmi://localhost/bsService";
     BookStoreService remoteService;
