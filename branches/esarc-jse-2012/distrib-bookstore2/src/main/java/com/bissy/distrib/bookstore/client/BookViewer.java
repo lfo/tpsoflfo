@@ -4,28 +4,23 @@ import com.bissy.distrib.bookstore.Amount;
 import com.bissy.distrib.bookstore.Book;
 import com.bissy.distrib.bookstore.BookFactory;
 import com.bissy.distrib.bookstore.BookStoreService;
+
 import java.util.Collection;
 import java.util.Collections;
 import javax.swing.GroupLayout;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author lfo
- */
+
 public class BookViewer extends javax.swing.JFrame {
 
-    private BookStoreService bookStoreService;
-
-    public BookViewer(BookStoreService bookStoreClient) {
-        this();
-        this.bookStoreService = bookStoreClient;
-    }
-
+	private BookStoreService bookStoreService;
+	
     /** Creates new form BookViewer */
-    public BookViewer() {
+    public BookViewer(BookStoreService bookStoreService) {
         initComponents();
+        setBooks(Collections.EMPTY_LIST);
+        this.bookStoreService = bookStoreService;
     }
 
     public void setBooks(Collection<Book> books) {
@@ -112,15 +107,15 @@ public class BookViewer extends javax.swing.JFrame {
 
         setJMenuBar(jMenuBar1);
 
-        GroupLayout layout = new GroupLayout(getContentPane());
+        org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE)
+            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+            .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE)
         );
 
         pack();
@@ -132,51 +127,50 @@ public class BookViewer extends javax.swing.JFrame {
 
     private void jAskStoreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jAskStoreActionPerformed
         try {
-            setBooks(bookStoreService.findAllBooks());
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+			setBooks(bookStoreService.findAllBooks());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
     }//GEN-LAST:event_jAskStoreActionPerformed
 
     private void jFindBookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFindBookActionPerformed
         String title = JOptionPane.showInputDialog(null, "Titre du livre ?",
                 "Titre du livre", JOptionPane.QUESTION_MESSAGE);
         try {
-            setBooks(bookStoreService.findBooks(title));
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+			setBooks(bookStoreService.findBooks(title));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }//GEN-LAST:event_jFindBookActionPerformed
 
     private void jGetPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jGetPriceActionPerformed
-        String title = getSelectedBook().getTitle();
-        String price = JOptionPane.showInputDialog(null, String.format("Donner votre prix d'achat pour %s ?", title),
-                String.format("Donner le prix pour %s", title), JOptionPane.QUESTION_MESSAGE);
         try {
-            Amount amount = bookStoreService.getPrice(getSelectedBook());
-            JOptionPane.showMessageDialog(this, String.format("Le prix est de : %s", amount));
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+			Amount amount = bookStoreService.getPrice(getSelectedBook());
+			JOptionPane.showMessageDialog(this, String.format("Le prix est de : %s", amount));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }//GEN-LAST:event_jGetPriceActionPerformed
 
     private void jBuyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBuyActionPerformed
         String title = getSelectedBook().getTitle();
-        String price = JOptionPane.showInputDialog(null, String.format("Donner votre prix d'achat pour %s ?", title),
-                String.format("Donner le prix pour %s", title), JOptionPane.QUESTION_MESSAGE);
-
-        Amount amount = Amount.parse(price);
+        String price = JOptionPane.showInputDialog(null, String.format("Donner votre prix d'achat pour %s ?",title),
+                String.format("Donner le prix pour %s",title), JOptionPane.QUESTION_MESSAGE);
+      Amount amount = Amount.parse(price); 
         try {
-            bookStoreService.buy(getSelectedBook(), amount);
-            setBooks(Collections.EMPTY_LIST);
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, e.getMessage());
-            e.printStackTrace();
-        }
+			bookStoreService.buy(getSelectedBook(), amount);
+			setBooks(Collections.EMPTY_LIST);
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(this, e.getMessage());
+			e.printStackTrace();
+		}
     }//GEN-LAST:event_jBuyActionPerformed
+
+   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem jAskFactory;
     private javax.swing.JMenuItem jAskStore;
@@ -190,8 +184,8 @@ public class BookViewer extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private Book getSelectedBook() {
-        int row = jTable1.getSelectedRow();
-        BookTableModel model = (BookTableModel) jTable1.getModel();
+        int row= jTable1.getSelectedRow();
+        BookTableModel model = (BookTableModel)jTable1.getModel();
         return model.getBookArray()[row];
     }
 
