@@ -21,7 +21,7 @@
         <module>distrib-bookstore3-enonce</module>
         <module>distrib-bookstore3-correction</module> 
         <module>distrib-ws</module>
-        <!--<module>distrib-bookstore1-ws</module>-->
+        <module>distrib-bookstore1-ws</module>
     </modules>
     
 </project>
