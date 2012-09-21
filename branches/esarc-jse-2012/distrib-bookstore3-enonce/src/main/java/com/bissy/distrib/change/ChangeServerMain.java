@@ -6,7 +6,7 @@ import java.rmi.registry.Registry;
 public class ChangeServerMain {
 
     public static void main(String... args) throws Exception {
-        Registry registry = LocateRegistry.createRegistry(Registry.REGISTRY_PORT);
+        Registry registry = LocateRegistry.getRegistry();
         System.out.println("Registry launched ...");
         ChangeService changeService = new ChangeServiceRemoteImpl();
         registry.rebind(ChangeService.SERVICE_URL, changeService);
