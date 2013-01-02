@@ -1,7 +1,13 @@
 = Énoncé =
 
-  Créer un MDB permettant de lancer la gestion de l'ordre d'achat à un système de gestion de stock.  
-  Créer un MDB de notification de réception de commande.
+== Configuration ==
 
-= Détails =
-TODO
+ * ActiveMQ 
+
+  ActiveMQ est serveur open source de gestion de message.
+
+  # Pour l'installer : [http://activemq.apache.org/getting-started.html]
+    Pour Windows : 
+
+
+  # Créer une file de message : 
