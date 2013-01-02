@@ -1,10 +1,6 @@
 = Énoncé =
 
-== Configuration ==
-
- * ActiveMQ 
-
-  ActiveMQ est serveur open source de gestion de message.
+Pour ce TP nous allons utiliser ActiveMQ. ActiveMQ est serveur open source de gestion de message.
 
   # Pour l'installer : [http://activemq.apache.org/getting-started.html]
     Pour Windows :
@@ -12,4 +8,8 @@
     * Dézipper
   # Créer une file de message : 
     * Lancer $ACTIVEMQ_HOME/bin/activemq.bat (pour Windows)
-    * Dans l'interface d'administration [http://localhost:8161/admin] créer la file TP10.
+    * Dans l'interface d'administration [http://localhost:8161/admin] créer une queue "jms-tp1".
+  # Exécuter le producer ainsi que le consumer du projet jee-jms-tp1
+
+  Que s'est il passé ?
+  
