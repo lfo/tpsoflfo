@@ -7,8 +7,11 @@
     <version>1.0-SNAPSHOT</version>
     <name>jee</name>
     
-     <properties>
+    <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.7</java.version>
+        <h2database.version>1.3.163</h2database.version>
+        <glassfish.version>3.1.1</glassfish.version>
     </properties>
     
     <modules>
@@ -22,6 +25,8 @@
         <module>jee-jpa-tp8</module>
         <module>jee-jpa-tp9</module>
         <module>jee-jpa-tp9-webapp</module>
+        <module>jee-jms-tp1</module>
+        <module>jee-mdb-tp1</module>
     </modules>
     <repositories>
         <repository>
@@ -37,8 +42,8 @@
                 <version>2.3.2</version>
                 <configuration>
                     <encoding>${project.build.sourceEncoding}</encoding>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -60,7 +65,7 @@
                 <version>2.3.2</version>
             </plugin>
         </plugins>
-    </build>	
+    </build>	  
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -71,7 +76,7 @@
             <dependency>
                 <groupId>com.h2database</groupId>
                 <artifactId>h2</artifactId>
-                <version>1.3.163</version>
+                <version>${h2database.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.eclipse.persistence</groupId>
