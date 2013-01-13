@@ -16,16 +16,25 @@
     
     <modules>
         <module>jee-jpa-tp1</module>
-        <module>jee-jpa-tp2</module>
-        <module>jee-jpa-tp3</module>
-        <module>jee-jpa-tp4</module>
-        <module>jee-jpa-tp5</module>
-        <module>jee-jpa-tp6</module>
-        <module>jee-jpa-tp7</module>        
-        <module>jee-jpa-tp8</module>
-        <module>jee-jpa-tp9</module>
-        <module>jee-jpa-tp9-webapp</module>
-        <module>jee-jms-tp1</module>
+        <!--<module>jee-jpa-tp2</module>-->
+        <!--<module>jee-jpa-tp3</module>-->
+        <!--<module>jee-jpa-tp4</module>-->
+        <!--<module>jee-jpa-tp5</module>-->
+        <!--<module>jee-jpa-tp6</module>-->
+        <!--<module>jee-jpa-tp7</module>-->        
+        <!--<module>jee-jpa-tp8</module>-->
+        <!--<module>jee-jpa-tp9</module>-->
+        <!--<module>jee-jpa-tp9-webapp</module>-->
+        <!--<module>jee-jms-tp1</module>-->
+        <!--<module>jee-jpa-tp1-correction</module>-->
+        <!--<module>jee-jpa-tp2-correction</module>-->
+        <!--<module>jee-jpa-tp3-correction</module>-->
+        <!--<module>jee-jpa-tp4-correction</module>-->
+        <!--<module>jee-jpa-tp5-correction</module>-->
+        <!--<module>jee-jpa-tp6-correction</module>-->
+        <!--<module>jee-jpa-tp7-correction</module>-->
+        <!--<module>jee-jpa-tp8-correction</module>-->
+        <!--<module>jee-jpa-tp9-correction</module>-->
     </modules>
     <repositories>
         <repository>
@@ -90,20 +99,5 @@
             </dependency>
         </dependencies>
     </dependencyManagement>  
-    <profiles>
-        <profile>
-            <id>correction</id>
-            <modules>
-                <module>jee-jpa-tp1-correction</module>
-                <module>jee-jpa-tp2-correction</module>
-                <module>jee-jpa-tp3-correction</module>
-                <module>jee-jpa-tp4-correction</module>
-                <module>jee-jpa-tp5-correction</module>
-                <module>jee-jpa-tp6-correction</module>
-                <module>jee-jpa-tp7-correction</module>
-                <module>jee-jpa-tp8-correction</module>
-                <module>jee-jpa-tp9-correction</module>
-            </modules>
-        </profile>
-    </profiles>
+    
 </project>
