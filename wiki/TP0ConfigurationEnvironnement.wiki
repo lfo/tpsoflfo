@@ -1,5 +1,4 @@
 
-
 #Configuration de l'environnement des TPs 
 
 = Introduction =
@@ -82,4 +81,4 @@ java -jar %HOMEPATH%\.m2\repository\com\h2database\h2\1.3.163\h2-1.3.163.jar
 
 Dans Netbeans menu Team>Subversion>Checkout... :
 
-  - https://tpsoflfo.googlecode.com/svn/branches/esarc-jee-2012
+  - https://tpsoflfo.googlecode.com/svn/branches/esarc-jee-2013
