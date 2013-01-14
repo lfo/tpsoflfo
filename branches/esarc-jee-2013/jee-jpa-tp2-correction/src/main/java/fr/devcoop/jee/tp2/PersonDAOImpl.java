@@ -19,26 +19,32 @@ public class PersonDAOImpl implements PersonDAO {
 
     private Connection connection;
 
+    @Override
     public void create(String firstName, String lastName) throws DAOException {
         execute("INSERT INTO PERSON (firstName, lastName) values ('" + firstName + "','" + lastName + "')");
     }
 
+    @Override
     public void delete(Person person) throws DAOException {
         execute("DELETE FROM Person WHERE id = " + person.getId());
     }
 
+    @Override
     public List<Person> getAllPersons() throws DAOException {
         return find("SELECT * FROM Person ORDER BY id ASC");
     }
 
+    @Override
     public List<Person> findAllWithPrefixLastName(String prefixLastName) throws DAOException {
         return find("SELECT * FROM Person WHERE lastname like '" + prefixLastName + "%' ORDER BY id ASC");
     }
 
+    @Override
     public void updateLastName(Person person) throws DAOException {
         execute("UPDATE Person set Lastname = '" + person.getLastName() + "' WHERE id = " + person.getId());
     }
 
+    @Override
     public void close() throws DAOException {
         try {
             if (connection != null) {
@@ -49,7 +55,7 @@ public class PersonDAOImpl implements PersonDAO {
         }
     }
 
-    private void initConnection() throws DAOException {
+    public void initConnection() throws DAOException {
         try {
             InputStream input = this.getClass().getClassLoader().getResourceAsStream("jdbc.properties");
             Properties properties = new Properties();

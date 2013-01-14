@@ -19,4 +19,6 @@ public interface PersonDAO {
     public void delete(Person person) throws DAOException;
     
     public void close() throws DAOException;
+
+    public void initConnection() throws DAOException;
 }
