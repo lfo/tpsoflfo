@@ -22,7 +22,6 @@ public class PersonDAOClient {
         for (Person person : persons) {
             System.out.println(person.toString());
         }
-        personDAO.close();
         
         persons = personDAO.findAllWithPrefixLastName("Du");
         for (Person person : persons) {
