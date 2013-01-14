@@ -57,9 +57,7 @@ public class PersonApp {
             }
             ResultSetMetaData metaData = resultSet.getMetaData();
             System.out.println(String.format("Nombre de colonne de ma requete %s", metaData.getColumnCount()));
-            resultSet.close();
-            statement.close();
-            connection.close();
+          
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         } finally {
