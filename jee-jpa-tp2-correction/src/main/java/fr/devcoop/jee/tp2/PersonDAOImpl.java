@@ -86,7 +86,7 @@ public class PersonDAOImpl implements PersonDAO {
         }
     }
 
-    private void execute(String query, Object ... parameters) throws DAOException {
+    private void execute(String query) throws DAOException {
         Statement statement = null;
         try {
             statement = getConnection().createStatement();           
@@ -104,7 +104,7 @@ public class PersonDAOImpl implements PersonDAO {
         }
     }
 
-    private List<Person> find(String sqlQuery, String... parameters) throws DAOException {
+    private List<Person> find(String sqlQuery) throws DAOException {
         List<Person> persons = new ArrayList<Person>();
         Statement statement = null;
         ResultSet result = null;
