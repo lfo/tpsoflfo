@@ -27,7 +27,7 @@
         <!--<module>jee-jpa-tp9-webapp</module>-->
         <!--<module>jee-jms-tp1</module>-->
         <module>jee-jpa-tp1-correction</module>
-        <!--<module>jee-jpa-tp2-correction</module>-->
+        <module>jee-jpa-tp2-correction</module>
         <!--<module>jee-jpa-tp3-correction</module>-->
         <!--<module>jee-jpa-tp4-correction</module>-->
         <!--<module>jee-jpa-tp5-correction</module>-->
