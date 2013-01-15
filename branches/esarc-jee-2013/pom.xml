@@ -29,7 +29,7 @@
         <module>jee-jpa-tp1-correction</module>
         <module>jee-jpa-tp2-correction</module>
         <module>jee-jpa-tp3-correction</module>
-        <!--<module>jee-jpa-tp4-correction</module>-->
+        <module>jee-jpa-tp4-correction</module>
         <!--<module>jee-jpa-tp5-correction</module>-->
         <!--<module>jee-jpa-tp6-correction</module>-->
         <!--<module>jee-jpa-tp7-correction</module>-->
