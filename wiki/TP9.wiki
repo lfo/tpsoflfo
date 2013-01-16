@@ -93,7 +93,7 @@ REM : Comme certains tests ne passent pas, il est possible de construire le jar 
 
 Plus d'infos : [http://docs.codehaus.org/display/MAVENUSER/Multi-modules+projects]
 
-=== Un conteneur de déploiement ===
+=== DEPRECATED Un conteneur de déploiement ===
 
 Installation et exécution de Glassfish
 
