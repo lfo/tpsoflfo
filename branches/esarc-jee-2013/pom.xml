@@ -34,7 +34,7 @@
         <module>jee-jpa-tp6-correction</module>
         <module>jee-jpa-tp7-correction</module>
         <module>jee-jpa-tp8-correction</module>
-        <!--<module>jee-jpa-tp9-correction</module>-->
+        <module>jee-jpa-tp9-correction</module>
     </modules>
     <repositories>
         <repository>
