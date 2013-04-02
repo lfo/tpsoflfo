@@ -1,0 +1,42 @@
+Line-Oriented I/O
+Character I/O usually occurs in bigger units than single characters. One common unit is the line: a string of characters with a line terminator at the end. A line terminator can be a carriage-return/line-feed sequence ("\r\n"), a single carriage-return ("\r"), or a single line-feed ("\n"). Supporting all possible line terminators allows programs to read text files created on any of the widely used operating systems.
+
+Let's modify the CopyCharacters example to use line-oriented I/O. To do this, we have to use two classes we haven't seen before, BufferedReader and PrintWriter. We'll explore these classes in greater depth in Buffered I/O and Formatting. Right now, we're just interested in their support for line-oriented I/O.
+
+The CopyLines example invokes BufferedReader.readLine and PrintWriter.println to do input and output one line at a time.
+
+    import java.io.FileReader;
+    import java.io.FileWriter;
+    import java.io.BufferedReader;
+    import java.io.PrintWriter;
+    import java.io.IOException;
+
+    public class CopyLines {
+        public static void main(String[] args) throws IOException {
+            BufferedReader inputStream = null;
+            PrintWriter outputStream = null;
+
+            try {
+                inputStream =
+                    new BufferedReader(new FileReader("xanadu.txt"));
+                outputStream =
+                    new PrintWriter(new FileWriter("characteroutput.txt"));
+
+                String l;
+                while ((l = inputStream.readLine()) != null) {
+                    outputStream.println(l);
+                }
+            } finally {
+                if (inputStream != null) {
+                    inputStream.close();
+                }
+                if (outputStream != null) {
+                    outputStream.close();
+                }
+            }
+        }
+    }
+
+Invoking readLine returns a line of text with the line CopyLines outputs each line using println, which appends the line terminator for the current operating system. This might not be the same line terminator that was used in the input file.
+
+There are many ways to structure text input and output beyond characters and lines. For more information, see Scanning and Formatting. 
