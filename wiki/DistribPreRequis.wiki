@@ -53,7 +53,7 @@ En cas de problème :
 
 Dans Netbeans>Team>Subversion>Checkout :
 
-  * Repository URL : [http://tpsoflfo.googlecode.com/svn/branches/esarc-jse-2012]
+  * Repository URL : [http://tpsoflfo.googlecode.com/svn/branches/esarc-jse-2013]
 
 = Obtenir les Corrections des TPs ==
 
