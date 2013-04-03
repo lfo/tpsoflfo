@@ -10,7 +10,7 @@
     <name>DISTRIB</name>
     <modules>
         <module>distrib-prerequis</module>
-        <!--<module>distrib-prerequis-correction</module>-->
+        <module>distrib-prerequis-correction</module>
         <module>distrib-bookstore1</module>
         <!--<module>distrib-bookstore1-socket</module>-->
         <!--<module>distrib-rmi</module>-->
