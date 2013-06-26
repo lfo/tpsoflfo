@@ -151,9 +151,6 @@ public class BookViewer extends javax.swing.JFrame {
     }//GEN-LAST:event_jFindBookActionPerformed
 
     private void jGetPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jGetPriceActionPerformed
-        String title = getSelectedBook().getTitle();
-        String price = JOptionPane.showInputDialog(null, String.format("Donner votre prix d'achat pour %s ?", title),
-                String.format("Donner le prix pour %s", title), JOptionPane.QUESTION_MESSAGE);
         try {
             Amount amount = bookStoreService.getPrice(getSelectedBook());
             JOptionPane.showMessageDialog(this, String.format("Le prix est de : %s", amount));
