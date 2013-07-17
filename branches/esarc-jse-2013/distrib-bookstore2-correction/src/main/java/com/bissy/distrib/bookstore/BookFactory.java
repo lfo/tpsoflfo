@@ -1,12 +1,12 @@
 package com.bissy.distrib.bookstore;
 
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.List;
 
 public class BookFactory {
 
-    public static Collection<Book> createBooks() {
-        Collection<Book> books = new ArrayList<Book>();
+    public static List<Book> createBooks() {
+        List<Book> books = new ArrayList<Book>();
         Author author = new Author("William", "Grosso");
         Book book = new Book(author, "1-56592-452-5", "Java RMI", "ref-1");
         books.add(book);
