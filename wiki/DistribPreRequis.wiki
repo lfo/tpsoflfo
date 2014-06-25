@@ -33,21 +33,14 @@ En cas de problème :
     * Lancer le programme d'installation.
     * Suivre les instructions
 
-== Maven ==
-
-  * [http://maven.apache.org]
-  * Outil de gestion de construction
-  * Bien intégré nativement dans Netbeans
-  * Simplifie la vie du développeur
-
-  * Installation : Déjà installé dans Netbeans
-
 = Obtenir les sources des TPs ==
 
 Dans Netbeans>Team>Subversion>Checkout :
 
-  * Repository URL : [http://tpsoflfo.googlecode.com/svn/branches/esarc-jse-2013]
+  * Repository URL : [http://tpsoflfo.googlecode.com/svn/branches/esarc-jse-2014]
 
+
+Ouvrir 
 = Obtenir les Corrections des TPs ==
 
  svn update
