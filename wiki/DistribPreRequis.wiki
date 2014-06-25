@@ -42,13 +42,6 @@ En cas de problème :
 
   * Installation : Déjà installé dans Netbeans
 
-
-== Netbeans & Maven ==
-
-  Pour en savoir plus sur l'utilisation de Maven :
-
-  [http://solitarygeek.com/java/netbeans-and-maven-a-quick-start-guide]
-
 = Obtenir les sources des TPs ==
 
 Dans Netbeans>Team>Subversion>Checkout :
@@ -58,13 +51,4 @@ Dans Netbeans>Team>Subversion>Checkout :
 = Obtenir les Corrections des TPs ==
 
  svn update
-
-
-= Parallèle RMI/ Web services ==
-
-  # Ouvrir le projet distrib-ws
-  # Réouvrir projet distri-rmi
-  # Lancer les deux exemples
-  # Comparer le code des 2 projets
-  # Comparer les traces d'exécution.
  
