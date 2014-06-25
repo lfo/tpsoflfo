@@ -33,6 +33,9 @@ En cas de problème :
     * Lancer le programme d'installation.
     * Suivre les instructions
 
+Pour aller plus vite : http://www.oracle.com/technetwork/java/javase/downloads/jdk-netbeans-jsp-142931.html
+
+
 = Obtenir les sources des TPs ==
 
   * Aller dans Netbeans>Team>Subversion>Checkout :
