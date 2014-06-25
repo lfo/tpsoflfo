@@ -35,13 +35,17 @@ En cas de problème :
 
 = Obtenir les sources des TPs ==
 
-Dans Netbeans>Team>Subversion>Checkout :
+  * Aller dans Netbeans>Team>Subversion>Checkout :
 
-  * Repository URL : [http://tpsoflfo.googlecode.com/svn/branches/esarc-jse-2014]
+  * Saisir l'URL du repository : [https://tpsoflfo.googlecode.com/svn/branches/esarc-jse-2014]
 
+  * Choisir Open Project... et sélectionner "DISTRIB" (projet qui contiendra tous les modules des TPs)
 
-Ouvrir 
+  * Depuis le projet DISTRIB, ouvrir le module "distrib-prerequis"
+
 = Obtenir les Corrections des TPs ==
 
- svn update
+  À chaque fin de TP une correction est donnée, pour l'obtenir il vous suffit de faire un clic droit sur le projet parent DISTRIB et sélectionner "Subversion>Update" une fois la correction posée. Un nouveau module dans DISTRIB apparaitra.
+
+
  
