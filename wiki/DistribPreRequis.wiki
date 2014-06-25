@@ -9,12 +9,12 @@
     * JRE (Java Runtime Environment)?
 {{{
 %> java –version
-java version "1.6.0"
+java version "1.8.0"
 }}}
     * JDK (Java Development Kit)?
 {{{
 %> javac –version
-javac 1.6.0
+javac 1.8.0
 }}}
 
 En cas de problème :
