@@ -6,7 +6,7 @@ import java.io.ObjectInput;
 import java.io.ObjectOutput;
 import java.io.Serializable;
 
-public class Author {
+public class Author implements Serializable, Externalizable {
 
     private transient long id;
     private String lastName;
