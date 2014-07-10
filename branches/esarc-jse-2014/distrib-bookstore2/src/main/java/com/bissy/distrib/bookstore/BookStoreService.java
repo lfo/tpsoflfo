@@ -1,11 +1,12 @@
 package com.bissy.distrib.bookstore;
 
+import java.rmi.Remote;
 import java.util.Collection;
 
 /**
  * Magasin de livre en ligne. 
  */
-public interface BookStoreService {
+public interface BookStoreService extends Remote {
 
     
     /**
