@@ -1,8 +1,10 @@
 package com.bissy.distrib.bookstore.persistence;
 
 import com.bissy.distrib.bookstore.Amount;
+import com.bissy.distrib.bookstore.Amount.CurrencyEnum;
 import com.bissy.distrib.bookstore.Book;
 import com.bissy.distrib.bookstore.BookFactory;
+
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.util.Collection;
@@ -15,13 +17,13 @@ import java.util.Map;
 public class BookStoreDao {
 
     private static Map<String, Book> BOOK_DATABASE = new HashMap<String, Book>();
-    private static Map<Book, Amount> PRICE_DATABASE = new HashMap<Book, Amount>();
+    private static Map<String, Amount> PRICE_DATABASE = new HashMap<String, Amount>();
 
     static {
         Collection<Book> books = BookFactory.createBooks();
         for (Book book : books) {
             BOOK_DATABASE.put(book.getTitle(), book);
-            PRICE_DATABASE.put(book, getRandomPrice());
+            PRICE_DATABASE.put(book.getTitle(), getRandomPrice());
         }
 
     }
@@ -35,17 +37,17 @@ public class BookStoreDao {
     }
 
     public Amount findPrice(Book book) {
-        return PRICE_DATABASE.get(book);
+        return PRICE_DATABASE.get(book.getTitle());
     }
 
     public void remove(Book book) {
         BOOK_DATABASE.remove(book.getTitle());
-        PRICE_DATABASE.remove(book);
+        PRICE_DATABASE.remove(book.getTitle());
     }
 
     private static Amount getRandomPrice() {
         MathContext context = new MathContext(2);
         BigDecimal bigDecimal = new BigDecimal(Math.random() * 100, context);
-        return new Amount(bigDecimal, Amount.CurrencyEnum.EURO);
+        return new Amount(bigDecimal, CurrencyEnum.EURO);
     }
 }
