@@ -17,8 +17,8 @@
         <module>distrib-bookstore1-rmi</module>
         <module>distrib-bookstore1-rmi-correction</module>
         <module>distrib-bookstore2</module>
-        <!--<module>distrib-bookstore2-correction</module>-->
-        <!--<module>distrib-bookstore3</module>--> 
+        <module>distrib-bookstore2-correction</module>
+        <module>distrib-bookstore3</module> 
         <!--<module>distrib-bookstore3-correction</module>--> 
         <!--<module>distrib-ws</module>-->
         <!--<module>distrib-bookstore1-ws</module>-->
