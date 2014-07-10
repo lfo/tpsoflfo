@@ -8,9 +8,9 @@ import java.util.Collection;
 public abstract class BookStoreClientMain {
 
     
-    public static void main(String ... args) {
+    public static void main(String ... args) throws Exception {
         Collection<Book> books = BookFactory.createBooks();
-        final BookViewer bookViewer = new BookViewer(null);
+        final BookViewer bookViewer = new BookViewer(new BookStoreClient());
         bookViewer.setBooks(books);
         EventQueue.invokeLater(new Runnable() {
             public void run() {
