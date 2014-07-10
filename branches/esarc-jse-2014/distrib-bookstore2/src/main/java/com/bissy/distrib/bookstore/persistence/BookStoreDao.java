@@ -30,7 +30,7 @@ public class BookStoreDao {
         return BOOK_DATABASE.get(title);
     }
 
-    public Collection<Book> findAllBook() throws Exception {
+    public Collection<Book> findAllBooks() throws Exception {
         return BOOK_DATABASE.values();
     }
 
