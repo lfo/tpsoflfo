@@ -12,6 +12,9 @@ public class RMIRegistryLauncher {
     public static void main(String ... args) throws Exception {
          LocateRegistry.createRegistry(Registry.REGISTRY_PORT);
          System.out.println("RMI registry launched ...");
-    }
+         while (true) {
+             Thread.currentThread().sleep(1000);
+         }
+    } 
     
 }
